@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ヘッダー全体 */
+.top_page_header {
+  background-color: #fff;
+  height: 80px;
+}
+
+/* 左のヘッダー */
+.left_menu{
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* 右のヘッダー */
+.right_menu li{
+  display: inline-block;
+}
+
+.right_menu li a{
+  font-weight: bold;
+  color: #333333;
+  padding: 20px;
+}
+
+.right_menu{
+  text-align: right;
+  padding-top: 25px;
+}
+
+.logo-icon {
+  width: 250px;
+}

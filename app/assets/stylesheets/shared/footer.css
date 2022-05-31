@@ -1,0 +1,22 @@
+.footer {
+  width: 100vw;
+  background-color: #FFF;
+  color: #333333;
+  text-align: center;
+  height: 100px;
+}
+
+.logo-white {
+  width: 150px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 0.5rem;
+}

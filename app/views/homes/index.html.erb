@@ -1,0 +1,107 @@
+<div class="wrapper">
+  <%= render "shared/header" %>
+
+  <div class="main_image">
+    <%= image_tag "top_image.png",id:"action-img", class: 'top-image'%>
+  </div>
+  <h2 class="second_title">ToDoを共有したいと思ったことはありませんか?</h2>
+  <div class="second_colum">
+    <div class="target">
+      <%= image_tag "icon1.png",id:"pass-logo", :size =>'50x50' %>
+      <h4 class="target_text">仕事中</h4>
+      <p>自分の業務が忙しくて<br>仲間とコミュニケーションが取れない<p>
+    </div>
+    <div class="target">
+      <%= image_tag "icon2.png",id:"pass-logo", :size =>'50x50' %>
+      <h4 class="target_text">帰宅後</h4>
+      <p>仕事のやり忘れがある気がして<br>心が落ち着かない<p>
+    </div>
+    <div class="target">
+      <%= image_tag "icon3.png",id:"pass-logo", :size =>'50x50' %>
+      <h4 class="target_text">休日</h4>
+      <p>心身ともに疲れて<br>大事な約束を忘れてしまった<p>
+    </div>
+    </div>
+    <div class="third_colum">
+      <%= image_tag "top_image2.png",id:"possible-img", class: 'top-image'%>
+    </div>
+    <h2 class="second_title">First ToDoでできること</h2>
+    <%# PCサイズ %>
+    <div class="possible_colum_1">
+      <div class="detail_description">
+      <h4 class="possible_text">１.ToDoを仲間と共有</h4>
+      <p>スケジュールをルーム内の仲間と共有しよう！</p>
+      <p>画像も投稿できて便利なこと間違いなし！</p>
+      <p>うっかり連絡を忘れても、後から思い出してもこれで安心！</p>
+      </div>
+      <div class="demo_image">
+        <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
+      </div>
+    </div>
+    <div class="possible_colum_2">
+      <div class="demo_image">
+        <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
+      </div>
+      <div class="detail_description">
+      <h4 class="possible_text">２.コメント機能でより楽しく</h4>
+      <p>ルーム内では、ToDo項目ごとにコメントの投稿が可能！</p>
+      <p>それぞれのタスクに対して進捗の報告や相談など、</p>
+      <p>顔を合わせなくてもコミュニケーションが取れる！</p>
+      <br>
+      </div>
+    </div>
+    <div class="possible_colum_3">
+      <div class="detail_description">
+      <h4 class="possible_text">３.マイページで自分のスケジュールも管理</h4>
+      <p>マイページで自分だけのToDoを作成できる！</p>
+      <p>もちろん画像も投稿できて、とても便利です！</p>
+      <p>複数のスケジュールをアプリ一つでまとめて管理しよう！</p>
+      </div>
+      <div class="demo_image">
+        <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
+      </div>
+    </div>
+    
+  </div>
+
+    <%# スマホサイズ %>
+    <div class="possible_colum_1_smartphone">
+      <div class="detail_description">
+        <h4 class="possible_text">１.ToDoを仲間と共有</h4>
+        <p>スケジュールをルーム内の仲間と共有しよう！</p>
+        <p>画像も投稿できて便利なこと間違いなし！</p>
+        <p>うっかり連絡を忘れても、後から思い出してもこれで安心！</p>
+      </div>
+      <div class="demo_image">
+        <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
+      </div>
+    </div>
+    <div class="possible_colum_2_smartphone">
+      <div class="detail_description">
+        <h4 class="possible_text">２.コメント機能でより楽しく</h4>
+        <p>ルーム内では、ToDo項目ごとにコメントの投稿が可能！</p>
+        <p>それぞれのタスクに対して進捗の報告や相談など、</p>
+        <p>顔を合わせなくてもコミュニケーションが取れる！</p>
+      <br>
+      <div class="demo_image">
+        <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
+      </div>
+      </div>
+    </div>
+    <div class="possible_colum_3_smartphone">
+      <div class="detail_description">
+        <h4 class="possible_text">３.マイページで自分のスケジュールも管理</h4>
+        <p>マイページで自分だけのToDoを作成できる！</p>
+        <p>もちろん画像も投稿できて、とても便利です！</p>
+        <p>複数のスケジュールをアプリ一つでまとめて管理しよう！</p>
+      </div>
+      <div class="demo_image">
+        <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
+      </div>
+    </div>
+    
+    <div class="btn_registration" id="btn_registration">
+      <%= link_to "新規登録はこちら", '#', class: 'btn_registration' %>
+    </div>
+  <%= render "shared/footer" %>
+</div>
