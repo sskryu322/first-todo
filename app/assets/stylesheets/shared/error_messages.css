@@ -1,0 +1,25 @@
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}
+
+/* タブレットサイズ以下のエラーメッセージサイズ */
+@media(max-width: 1024px){
+  .error-message {
+    font-size: 2vw;
+  }
+}
+
+/* スマホサイズ以下のエラーメッセージサイズ */
+@media (max-width: 599px){
+  .error-message {
+    font-size: 4vw;
+  }
+}
