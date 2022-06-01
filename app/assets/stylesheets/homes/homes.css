@@ -139,7 +139,7 @@ body {
 }
 
 /* スマホサイズ以下の場合に表示 */
-@media (max-width: 600px){
+@media (max-width: 700px){
   /* ToDoを共有したいと思ったことはありませんか? */
   .second_title{
     font-size: 1rem;
@@ -168,12 +168,15 @@ body {
   
  .possible_colum_1_smartphone{
    display: inline;
+   text-align: center;
  } 
  .possible_colum_2_smartphone{
    display: inline;
+   text-align: center;
  } 
  .possible_colum_3_smartphone{
    display: inline;
+   text-align: center;
  } 
  .detail_description{
   width: 100%;
