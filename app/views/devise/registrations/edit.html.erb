@@ -4,10 +4,11 @@
   <div class='form-wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>
-        ユーザー情報の編集
+        ユーザー編集
       </h1>
     </div>
   
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示%>
     <%= render 'shared/error_messages', model: f.object %>
   
     <div class="form-group">
@@ -21,15 +22,12 @@
         <label class="form-text">メールアドレス</label>
       </div>
       <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autocomplete: 'off' %>
+      <br><p class='info-text'>以下の項目からは任意となります。<br>登録内容はプロフィールページに表示されます。</p>
     </div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
     
-    <br>
-      <p class='info-text'>以下の項目からは任意となります。<br>登録内容はプロフィールページに表示されます。</p>
-    </div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
     
     <div class="form-group">
       <div class='form-text-wrap'>
@@ -55,9 +53,9 @@
       </div>
       <%= f.text_area :position, class:"input-default", id:"position", placeholder:"例) 店長/生鮮担当/薬剤師", maxlength:"40" , autofocus: true %>
     </div>
-    
+    <br><br>
     <div class='register-btn'>
-      <%= f.submit "上記内容に更新する" ,class:"register-btn-action" %>
+      <%= f.submit "内容を更新する" ,class:"register-btn-action" %>
     </div>
   </div>
   <% end %>
