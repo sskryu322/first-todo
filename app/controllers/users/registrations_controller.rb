@@ -59,12 +59,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # 新規登録後はマイページへ遷移
   def after_sign_up_path_for(resource)
-    root_path
+    mylists_path
   end
 
   # 更新後はマイページへ遷移
   def after_update_path_for(_resource)
-    root_path
+    mylists_path
   end
 
   # The path used after sign up.

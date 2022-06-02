@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   has_many :room_users
   has_many :rooms, through: :room_users
-  has_many :my_lists
-  has_many :group_lists
+  has_many :mylists
+  has_many :grouplists
   has_many :messages
 
   validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }

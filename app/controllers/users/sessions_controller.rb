@@ -22,9 +22,14 @@ class Users::SessionsController < Devise::SessionsController
 
   protected
 
+  def configure_sign_in_params
+    # 新規登録時に追加項目の取得を許可
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :first_name, :last_name, :department, :position])
+  end
+
   #ログイン後はマイページへ遷移
   def after_sign_in_path_for(resource)
-    root_path
+    mylists_path
   end 
   #ログアウト後のリダイレクト先
   def after_sign_out_path_for(resource)
