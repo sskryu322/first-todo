@@ -99,9 +99,10 @@
         <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
       </div>
     </div>
-    
+    <% unless user_signed_in? %>
     <div class="btn_registration" id="btn_registration">
       <%= link_to "新規登録はこちら", new_user_registration_path, class: 'btn_registration' %>
     </div>
+    <% end %>
   <%= render "shared/footer" %>
 </div>

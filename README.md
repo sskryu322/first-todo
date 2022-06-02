@@ -8,10 +8,10 @@
 | nickname                     | string  | null: false               |
 | email                        | string  | null: false, unique: true |
 | encrypted_password           | string  | null: false               |
-| first_name                   | string  | null: false               |
-| last_name                    | string  | null: false               |
-| department                   | string  | null: false               |
-| position                     | string  | null: false               |
+| first_name                   | string  | null: true                |
+| last_name                    | string  | null: true                |
+| department                   | string  | null: true                |
+| position                     | string  | null: true                |
 
 ### Association
 
