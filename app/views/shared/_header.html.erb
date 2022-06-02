@@ -4,13 +4,13 @@
   </div>
   <div class='right_menu'>
     <ul>
-    <%# if user_signed_in? %>
-      <li><%#= link_to current_user.nickname, objectives_path %></li>
-      <li><%= link_to 'ログアウト', '#', class: "logout" %> </li>
-    <%# else %>
-      <li><%= link_to 'ログイン', '#', class: "login" %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, root_path %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    <%# end %>
+    <% end %>
     </ul>
   </div>
 </header>

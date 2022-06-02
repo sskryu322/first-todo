@@ -18,13 +18,15 @@
 /* 右のヘッダー */
 .right_menu li{
   display: inline-block;
+  
 }
 
 .right_menu li a{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   color: #333333;
   padding: 20px;
+  text-decoration: none;
 }
 
 .right_menu{
@@ -34,4 +36,27 @@
 
 .logo-icon {
   width: 250px;
+}
+
+.logout,.login,.sign-up{
+  width: 100%;
+  background: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  color: #fff;
+  line-height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.logout:hover {
+  background-color: #DCDCDC;
+}
+
+.login:hover {
+  background-color: #DCDCDC;
+}
+
+.sign-up:hover {
+  background-color: #DCDCDC;
 }
