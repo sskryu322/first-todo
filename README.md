@@ -28,7 +28,7 @@
 | ---------------------------- | ---------- | ------------------------------ |
 | title                        | string     | null: false                    |
 | start_time                   | datetime   | null: false                    |
-| text                         | string     |                                |
+| text                         | string     | null: true                     |
 | user_id                      | references | null: false, foreign_key: true |
 
 ### Association
@@ -69,7 +69,7 @@
 | ---------------------------- | ---------- | ------------------------------ |
 | title                        | string     | null: false                    |
 | start_time                   | datetime   | null: false                    |
-| text                         | string     |                                |
+| text                         | string     | null: true                     |
 | user_id                      | references | null: false, foreign_key: true |
 | room_id                      | references | null: false, foreign_key: true |
 
@@ -84,7 +84,7 @@
 
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
-| content  | string     |                                |
+| content  | string     | null: true                     |
 | user_id  | references | null: false, foreign_key: true |
 | room_id  | references | null: false, foreign_key: true |
 
