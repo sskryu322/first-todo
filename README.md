@@ -34,6 +34,7 @@
 ### Association
 
 - belongs_to :user
+- has_one_attached :image
 
 
 ## rooms テーブル
@@ -78,6 +79,7 @@
 - has_many :messages
 - belongs_to :user
 - belongs_to :room
+- has_one_attached :image
 
 
 ## messages テーブル
