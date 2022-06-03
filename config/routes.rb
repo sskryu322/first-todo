@@ -3,6 +3,6 @@ Rails.application.routes.draw do
                                     sessions: 'users/sessions' }
   get 'homes', to: 'homes#index'
   root to: 'homes#index'
-  resources :mylists, only: :index
+  resources :mylists
   resources :users, only: :show
 end

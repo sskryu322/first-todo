@@ -84,6 +84,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.2)
+      devise (>= 4.8.0)
     diff-lcs (1.5.0)
     erubi (1.10.0)
     factory_bot (6.2.1)
@@ -163,6 +165,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails-i18n (7.0.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (6.0.5)
       actionpack (= 6.0.5)
       activesupport (= 6.0.5)
@@ -279,6 +284,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  devise-i18n
   factory_bot_rails
   faker
   image_processing (~> 1.2)
@@ -289,6 +295,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 6.0.0)
+  rails-i18n
   rspec-rails
   rubocop
   sass-rails (~> 5)

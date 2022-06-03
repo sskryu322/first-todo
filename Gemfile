@@ -61,3 +61,5 @@ gem 'pry-rails'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem "simple_calendar", "~> 2.4"
+gem 'rails-i18n'
+gem 'devise-i18n'

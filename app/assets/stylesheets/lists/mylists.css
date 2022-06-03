@@ -1,0 +1,153 @@
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.flex-contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.side-var {
+  width: 30%;
+  height: auto;
+  padding-left: 20px;
+}
+
+.title-content {
+  width: 200px;
+  padding: 5px;
+}
+
+/* カレンダー部分 */
+.calendar {
+  width: 70%;
+  height: auto;
+  background-color: white;
+}
+
+/* リスト表示部分 */
+.main-contents{
+  height: auto;
+  width: 100%;
+  padding: 0 50px 10px 300px;
+}
+
+.articles{
+  margin: 0 0 0 auto;
+  width: 90%;
+  padding: 30px 50px;
+}
+
+.article{
+  height: 150px;
+  width: 100%;
+  background: #DDDDDD;
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content:space-between; 
+  border-radius: 10px;
+}
+
+.article-overview{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+}
+
+.article-overview a{
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.article-title{
+  height: 50%;
+  width: 100%;
+  padding: 10px 10px 0 10px;
+  font-size: 23px;
+  color: #555555;
+  font-weight: bold;
+  border-bottom: solid 2px #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+.article-information{
+  height: 15%;
+  width: 100%;
+  display: flex;
+}
+
+.article-post-date{
+  width: 40%;
+  font-size: 15px;
+  color: #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-about-time{
+  width: 35%;
+  padding: 5px;
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-information {
+  height: 30px;
+}
+
+.article-check{
+  display: flex;
+  width: 40%;
+  height: 10%;
+  
+}
+
+.article-check-button{
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  margin-right: 20px;
+  background: #3ccace;
+  text-align: center;
+  
+  font-size: 13px;
+  color: white;
+  border-radius: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-image{
+  width: 30%;
+}
+
+.no-image {
+  width: 20%;
+  line-height: 100px;
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
