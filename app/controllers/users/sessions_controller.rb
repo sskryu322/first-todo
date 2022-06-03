@@ -3,8 +3,6 @@
 class Users::SessionsController < Devise::SessionsController
   before_action :configure_sign_in_params, only: [:create]
 
-
-
   # GET /resource/sign_in
   # def new
   #   super
@@ -27,12 +25,13 @@ class Users::SessionsController < Devise::SessionsController
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :first_name, :last_name, :department, :position])
   end
 
-  #ログイン後はマイページへ遷移
-  def after_sign_in_path_for(resource)
+  # ログイン後はマイページへ遷移
+  def after_sign_in_path_for(_resource)
     mylists_path
-  end 
-  #ログアウト後のリダイレクト先
-  def after_sign_out_path_for(resource)
+  end
+
+  # ログアウト後のリダイレクト先
+  def after_sign_out_path_for(_resource)
     root_path
-  end 
+  end
 end
