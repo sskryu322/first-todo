@@ -64,7 +64,7 @@
     
   </div>
 
-    <%# スマホサイズ %>
+    <%# スマホサイズ縦に %>
     <div class="possible_colum_1_smartphone">
       <div class="detail_description">
         <h4 class="possible_text">１.ToDoを仲間と共有</h4>
@@ -99,9 +99,10 @@
         <%= image_tag "catch.jpg",id:"desctiption-img",class: 'contents-image'%>
       </div>
     </div>
-    
+    <% unless user_signed_in? %>
     <div class="btn_registration" id="btn_registration">
-      <%= link_to "新規登録はこちら", '#', class: 'btn_registration' %>
+      <%= link_to "新規登録はこちら", new_user_registration_path, class: 'btn_registration' %>
     </div>
+    <% end %>
   <%= render "shared/footer" %>
 </div>

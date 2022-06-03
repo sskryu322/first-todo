@@ -121,6 +121,7 @@ body {
   margin-top: 3rem;
   border-radius: 43px;
   background: linear-gradient(145deg, #3ccace, #89DDFF);
+  color: white;
   box-shadow:  10px 10px 20px #b8b8bd,
   -10px -10px 20px #ffffff;
   cursor: pointer;
@@ -139,7 +140,7 @@ body {
 }
 
 /* スマホサイズ以下の場合に表示 */
-@media (max-width: 600px){
+@media (max-width: 700px){
   /* ToDoを共有したいと思ったことはありませんか? */
   .second_title{
     font-size: 1rem;
@@ -168,12 +169,15 @@ body {
   
  .possible_colum_1_smartphone{
    display: inline;
+   text-align: center;
  } 
  .possible_colum_2_smartphone{
    display: inline;
+   text-align: center;
  } 
  .possible_colum_3_smartphone{
    display: inline;
+   text-align: center;
  } 
  .detail_description{
   width: 100%;

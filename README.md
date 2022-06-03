@@ -8,21 +8,21 @@
 | nickname                     | string  | null: false               |
 | email                        | string  | null: false, unique: true |
 | encrypted_password           | string  | null: false               |
-| first_name                   | string  | null: false               |
-| last_name                    | string  | null: false               |
-| department                   | string  | null: false               |
-| position                     | string  | null: false               |
+| first_name                   | string  | null: true                |
+| last_name                    | string  | null: true                |
+| department                   | string  | null: true                |
+| position                     | string  | null: true                |
 
 ### Association
 
 - has_many :room_users
 - has_many :rooms, through: :room_users
-- has_many :my_lists
-- has_many :group_lists
+- has_many :mylists
+- has_many :grouplists
 - has_many :messages
 
 
-## my_lists テーブル
+## mylists テーブル
 
 | Column                       | Type       | Options                        |
 | ---------------------------- | ---------- | ------------------------------ |
@@ -47,7 +47,7 @@
 
 - has_many :room_users
 - has_many :users, through: :room_users
-- has_many :group_lists
+- has_many :grouplists
 
 
 ## room_users テーブル
@@ -63,7 +63,7 @@
 - belongs_to :user
 
 
-## group_lists テーブル
+## grouplists テーブル
 
 | Column                       | Type       | Options                        |
 | ---------------------------- | ---------- | ------------------------------ |
@@ -90,4 +90,4 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :group_list
+- belongs_to :grouplist
