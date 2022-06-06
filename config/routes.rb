@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'homes#index'
   resources :mylists
   resources :users, only: :show
+  resources :rooms
 end
