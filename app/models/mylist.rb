@@ -4,6 +4,7 @@ class Mylist < ApplicationRecord
 
   with_options presence: true do
     validates :title, length: { maximum: 40 }
+    validates :start_time
   end
   validates :text, length: { maximum: 200 }
 end
