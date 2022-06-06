@@ -3,7 +3,7 @@ Rails.application.routes.draw do
                                     sessions: 'users/sessions' }
   get 'homes', to: 'homes#index'
   root to: 'homes#index'
-  resources :mylists
+  resources :mylists, only: [:index, :create, :edit, :show, :update, :destroy]
   resources :users, only: :show
-  resources :rooms
+  resources :rooms, only: [:index, :create, :edit, :show, :update, :destroy]
 end

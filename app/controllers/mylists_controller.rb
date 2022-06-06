@@ -4,7 +4,6 @@ class MylistsController < ApplicationController
   before_action :ensure_correct_customer, only: [:edit, :update, :destroy]
 
   def index
-
     @mylist = Mylist.new
     @user = current_user
     @mylists = Mylist.where(user_id: current_user).order(start_time: 'asc')

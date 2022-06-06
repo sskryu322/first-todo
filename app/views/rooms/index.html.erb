@@ -4,12 +4,13 @@
 
 
   <%= form_with model: @room, local: true do |f| %>
-    <%# エラーメッセージ%>
     <div class="new-room-wrapper">
-      <%= render 'shared/error_messages', model: f.object %>
+      <%# エラーメッセージ%>
+      <%#= render 'shared/error_messages', model: f.object %>
+
       <div class="article-post-room-index">
-        <label for="title">ルーム名(必須)</label><br>
-        <%= f.text_field :title, class:"title-content-room-index", placeholder:"（40文字まで)", maxlength:"40"%>
+        <label for="name">ルーム名(必須)</label><br>
+        <%= f.text_field :name, class:"title-content-room-index", placeholder:"（40文字まで)", maxlength:"40"%>
       </div>
       <div class="article-post-room-index">
         <label for="password">ルームキー(必須)</label><br>
@@ -38,7 +39,13 @@
 
   <%# ルーム一覧 %> 
   <div class="room-list">
-    
+    <% @rooms.each do |room| %>
+      <div class="room">
+        <div class="room-name">
+          <%= link_to room.name, '#' %>
+        </div>
+      </div>
+    <% end %>
   </div>
 
 </div> 
