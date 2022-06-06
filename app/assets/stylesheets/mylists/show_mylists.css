@@ -1,0 +1,133 @@
+.page-title-show {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+
+.main-contents-show {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+
+.article-show {
+  margin: 30px auto 100px;
+  height: 100%;
+  width: 70%;
+  background: #DDDDDD;
+  padding: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+}
+
+.show-title {
+  font-size: 25px;
+}
+
+.article-post-date-show {
+  width: 100%;
+  font-size: 20px;
+  color: #555555;
+  white-space: nowrap;
+  border-bottom: solid 2px #555555;
+  padding: 0 20px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+}
+
+.article-title-show {
+  width: 100%;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #555555;
+  font-weight: bold;
+  border-bottom: solid 2px #555555;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.article-text-show {
+  width: 100%;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #555555;
+  font-weight: bold;
+  border-bottom: solid 2px #555555;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.article-information-show {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.article-check-show {
+  width: 50%;
+  height: 10%;
+}
+
+
+
+.article-image-show {
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.no-image-show {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  line-height: 100px;
+  color: white;
+  text-decoration: underline;
+}
+
+.image-title {
+  font-size: 25px;
+  color: #555555;
+  padding-right: 78%;
+}
+
+.flex-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.article-check-button-show, .article-edit-button-show{
+  height: 45px;
+  width: 100%;
+  padding: 5px;
+  margin: 20px 10px 0 0;
+  background: #3ccace;
+  text-align: center;
+  
+  font-size: 13px;
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2px solid #CCC;
+  cursor: pointer;
+}
+
+.article-check-button-show a, .article-edit-button-show a  {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  height: 40px;
+  line-height: 30px;
+  width: 100%;
+  display: block;
+}

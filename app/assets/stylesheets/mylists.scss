@@ -1,3 +1,12 @@
 // Place all the styles related to the mylists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.simple-calendar {
+.past, .next-month {
+  background-color: #F5F5F5;
+  border: 1px solid #CCC;
+}
+.has-events {
+  border: 2px solid #CCC;
+}
+}
