@@ -28,12 +28,12 @@ RSpec.describe Mylist, type: :model do
       it 'titleが空では登録できない' do
         @mylist.title = ''
         @mylist.valid?
-        expect(@mylist.errors.full_messages).to include("Titleを入力してください")
+        expect(@mylist.errors.full_messages).to include('Titleを入力してください')
       end
       it 'start_timeが空では登録できない' do
         @mylist.start_time = ''
         @mylist.valid?
-        expect(@mylist.errors.full_messages).to include("Start timeを入力してください")
+        expect(@mylist.errors.full_messages).to include('Start timeを入力してください')
       end
     end
   end

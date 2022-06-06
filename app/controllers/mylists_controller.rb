@@ -6,7 +6,7 @@ class MylistsController < ApplicationController
   def index
     @mylist = Mylist.new
     @user = current_user
-    @mylists = Mylist.where(user_id: current_user).order(start_time: "asc")
+    @mylists = Mylist.where(user_id: current_user).order(start_time: 'asc')
   end
 
   def edit
@@ -18,10 +18,10 @@ class MylistsController < ApplicationController
     @user = current_user
     @mylists = Mylist.where(user_id: current_user)
     if @mylist.user_id == current_user.id && @mylist.save
-      flash[:notice] = "♫予定を登録しました♫"
+      flash[:notice] = '♫予定を登録しました♫'
       redirect_to mylists_path
     else
-      flash.now[:alert] = "タイトルを正しく入力してください"
+      flash.now[:alert] = 'タイトルを正しく入力してください'
       render :index
     end
   end
@@ -40,18 +40,17 @@ class MylistsController < ApplicationController
 
   def destroy
     @mylist.destroy
-    flash[:notice] = "予定を削除しました"
+    flash[:notice] = '予定を削除しました'
     redirect_to mylists_path
   end
 
   private
+
   def ensure_correct_customer
     @mylist = Mylist.find(params[:id])
-      unless @mylist.user_id == current_user.id
-        redirect_to mylists_path
-      end
-    end
-  
+    redirect_to mylists_path unless @mylist.user_id == current_user.id
+  end
+
   def mylists_params
     params.require(:mylist).permit(:title, :start_time, :text, :user, :image).merge(user_id: current_user.id)
   end
@@ -60,5 +59,4 @@ class MylistsController < ApplicationController
     @mylist = Mylist.find(params[:id])
     redirect_to action: :index unless current_user.id == @mylist.user_id
   end
-
 end
