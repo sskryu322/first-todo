@@ -15,7 +15,8 @@
       <%= form_with model: @mylist, local: true do |f| %>
       <%# メッセージ%>
       <div class="flash-index"><%= flash[:notice] %></div>
-    
+      <%# エラーメッセージ%>
+      <div class="flash-index-error"><%= flash.now[:alert] %></div>
       <div class="field row">
         <P class="schedule-input-title">予定を登録する</P>
         <label for="title">タイトル(必須)</label>

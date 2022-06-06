@@ -15,11 +15,13 @@ class MylistsController < ApplicationController
 
   def create
     @mylist = Mylist.new(mylists_params)
-    if  @mylist.user_id == current_user.id
-      @mylist.save
-        flash[:notice] = "♫予定を登録しました♫"
-        redirect_to mylists_path
+    @user = current_user
+    @mylists = Mylist.where(user_id: current_user)
+    if @mylist.user_id == current_user.id && @mylist.save
+      flash[:notice] = "♫予定を登録しました♫"
+      redirect_to mylists_path
     else
+      flash.now[:alert] = "タイトルを正しく入力してください"
       render :index
     end
   end
