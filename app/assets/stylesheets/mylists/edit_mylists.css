@@ -1,0 +1,84 @@
+.article-post-date-edit {
+  width: 80%;
+  font-size: 20px;
+  color: #555555;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  white-space: nowrap;
+}
+
+.title-content-edit {
+  height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+}
+
+.article-title-edit {
+  width: 80%;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #555555;
+  font-weight: bold;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.article-text-edit {
+  width: 100%;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #555555;
+  font-weight: bold;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.article-image-edit {
+  font-size: 20px;
+  padding: 0 20px;
+  color: #555555;
+}
+
+input[type="file"].image-edit{
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 18px;
+  background-color: #fff;
+  color: #555555;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #CCC;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.register-btn-edit {
+  height: 50px;
+  width: 50%;
+  padding: 5px;
+  margin: 20px 0 20px 20px;
+  background: #3ccace;
+  text-align: center;
+  font-size: 17px;
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2px solid #CCC;
+  cursor: pointer;
+}
+
+input[type="submit"].register-btn-edit {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.register-field-edit {
+  margin-top: 20px;
+}

@@ -1,0 +1,301 @@
+.flash-index {
+  margin: 0 auto;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  color: red;
+  background-color: #FFFFC0;
+  border-radius: 20px;
+
+}
+
+.top-title {
+  display: flex;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  width: 70%;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px 50px 0 0;
+}
+
+.rooms-index {
+  margin: 40px 0 0 30px;
+  width: 30%;
+  display: block;
+  text-align: center;
+  
+}
+
+.rooms-index a {
+  padding: 20px;
+  text-decoration: none;
+  background-color: #F89174;
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid #CCC;
+}
+
+.flex-contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.side-var {
+  width: 30%;
+  height: auto;
+  padding: 10px 20px;
+  margin-right: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.schedule-input-title {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.title-content {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  font-size: 15px;
+}
+
+.text-content {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  font-size: 12px;
+}
+
+.date-content {
+  width: 30%;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  
+}
+
+input[type="file"].image{
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 13px;
+  background-color: #fff;
+  color: #555555;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #CCC;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .file-field {
+  display: block;
+  width: 40%;
+  background: #3ccace;
+  border: 2px solid #CCC;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 25px;
+}  */
+
+.register-field {
+  text-align: center;
+}
+
+form input[type="submit"].register-btn {
+  width: 80%;
+  margin: 20px 0;
+  background: #3ccace;
+  border: 2px solid #CCC;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* カレンダー部分 */
+.calendar {
+  width: 70%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.calendar-title {
+  font-size: 20px;
+}
+
+.calendar-heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendar-heading a {
+  padding: 3px 5px;
+  background-color: #3ccace;
+  color: #fff;
+  border-radius: 10px;
+  margin: 0 20px;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid #CCC;
+}
+
+.calendar-schedule {
+  background-color: #F89174;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 2px;
+  border: 1px solid #CCC;
+}
+
+.calendar-schedule a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+/* リスト表示部分 */
+.main-contents{
+  height: auto;
+  width: 100%;
+  padding: 0 50px 10px 300px;
+}
+
+.articles{
+  margin: 0 0 0 auto;
+  width: 80%;
+  padding: 0 70px 0 10px;
+}
+
+.article{
+  height: 150px;
+  width: 100%;
+  background: #DDDDDD;
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content:space-between; 
+  border-radius: 10px;
+  border: 1px solid #CCC;
+}
+
+.article-overview{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+}
+
+.article-overview a{
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.article-title{
+  height: 50%;
+  width: 100%;
+  padding: 10px 10px 0 10px;
+  font-size: 23px;
+  color: #555555;
+  font-weight: bold;
+  border-bottom: solid 2px #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+.article-information{
+  height: 15%;
+  width: 100%;
+  display: flex;
+}
+
+.article-post-date{
+  width: 60%;
+  font-size: 15px;
+  color: #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-about-time{
+  width: 35%;
+  padding: 5px;
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-information {
+  height: 30px;
+}
+
+.article-check{
+  display: flex;
+  width: 50%;
+  height: 10%;
+  
+}
+
+.article-check-button, .article-edit-button{
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  margin-right: 20px;
+  background: #3ccace;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2px solid #CCC;
+  cursor: pointer;
+}
+
+.article-check-button a, .article-edit-button a  {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.article-image{
+  width: 25%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.no-image {
+  width: 20%;
+  line-height: 100px;
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+
+

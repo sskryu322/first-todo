@@ -1,31 +1,36 @@
 <div class="wrapper">
   <%= render "shared/third-header" %>
-
-  <div class="page-title">My ToDo</div>
   
+
+  <div class="top-title">
+    <div class="rooms-index">
+      <%= link_to 'ルームに移動する', '#', {class: "btn-shadow"}%>
+    </div>
+    <div class="page-title">My ToDo</div>
+  </div>
 
   <%# 新規投稿部分 %>
   <div class="flex-contents">
     <div class="side-var">
-    <%= form_with model: @mylist, local: true do |f| %>
+      <%= form_with model: @mylist, local: true do |f| %>
+      <%# メッセージ%>
+      <div class="flash-index"><%= flash[:notice] %></div>
+    
       <div class="field row">
-        <P>予定を入力</P>
+        <P class="schedule-input-title">予定を登録する</P>
         <label for="title">タイトル(必須)</label>
-        <p><%= f.text_area :title, class:"title-content", placeholder:"（40文字まで)", maxlength:"40"%></p>
+        <p><%= f.text_field :title, class:"title-content", placeholder:"（40文字まで)", maxlength:"40"%></p>
         <label for="start_time">日付(必須)</label>
-        <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "form-control", id: 'ymd-date'}%></p>
+        <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%></p>
         <label for="text">詳細</label>
-        <p><%= f.text_area :text, placeholder:"（200文字まで)", maxlength:"200"%></p>
+        <p><%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%></p>
         <label for="image">画像</label>
-        <p><%= f.file_field :image%></p>
+        <p class="file-field"><%= f.file_field :image, class: "image"%></p>
       </div>
-      <div class="actions row">
-       <%= f.submit class: "btn btn-sm btn-hachiss" %>
+      <div class="register-field">
+       <%= f.submit class: "register-btn" %>
       </div>
-    <% end %>
-      <div class="rooms-index">
-        <%= link_to 'ルームページに移動する', '#'%>
-      </div>
+      <% end %>
     </div>
   
    <%# カレンダー部分%>
@@ -33,8 +38,8 @@
       <%= month_calendar events: @user.mylists do |date, mylists| %>
         <%= date.day %>
         <% mylists.each do |mylist| %>
-		      <div>
-		        <%= link_to mylist.title, '#' %>
+		      <div class="calendar-schedule">
+		        <%= link_to mylist.title, mylist_path(mylist.id) %>
 		      </div>
 		    <% end %>
       <% end %>
@@ -45,11 +50,11 @@
   <div class="main-contents">
     <div class="articles">
       <% @mylists.each do |mylist| %>
-        <div class="article" id=<%= mylist.id%>>
+        <div class="article" id="article-list">
           <div class="article-overview">
-            <%= link_to "#" do %>
+            <%= link_to mylist_path(mylist.id) do %>
               <p class="article-post-date">
-                <%= mylist.start_time.strftime("%Y-%m-%d %H:%M")%>
+                <%= mylist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
               </p>
               <p class="article-title">
                 <%= mylist.title%>
@@ -59,18 +64,20 @@
             <div class="article-information">
               <div class="article-check">
                 <%# if Check.where(user_id: current_user.id, mylist_id: mylist.id).exists? %>
-                  <div class="article-check-button" id="edit" data=<%= mylist.id %>>
-                  編集
+                  <div class="article-edit-button" id="edit" data=<%= @mylist.id %>>
+                    <%= link_to "編集", edit_mylist_path(mylist.id)%>
                   </div>
-                  <div class="article-check-button" id="delete" data=<%= mylist.id %>>
-                  完了
+                  <div class="article-check-button" id="hidden-btn" data=<%= @mylist.id %>>
+                    <%= link_to "完了", mylist_path(mylist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
                   </div>
                 <%# end %>
               </div>
             </div>
           </div>
           <% if mylist.image.present? %>
-          <%= image_tag mylist.image.variant(resize_to_fill: [500, 500]), class: "article-image" %>
+          <%= link_to mylist.image, "data-lightbox" => mylist.image do %>
+            <%= image_tag mylist.image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+          <% end %>
           <% else %>
           <div class="no-image">noimege</div>
           <% end %>
@@ -80,4 +87,4 @@
   </div>
   
 </div> 
-<%= render "shared/footer" %> 
+<%= render "shared/second-footer" %> 
