@@ -20,24 +20,24 @@ RSpec.describe Room, type: :model do
       it 'nameが41文字以上では作成できない' do
         @room.name = 'あ' * 41
         @room.valid?
-        expect(@room.errors.full_messages).to include("Nameは40文字以内で入力してください")
+        expect(@room.errors.full_messages).to include('Nameは40文字以内で入力してください')
       end
       it 'passwordが空では作成できない' do
         @room.password = nil
         @room.valid?
-        expect(@room.errors.full_messages).to include("Passwordを入力してください")
+        expect(@room.errors.full_messages).to include('Passwordを入力してください')
       end
       it 'passwordとpassword_confirmationが不一致では登録できない' do
         @room.password = 'a123456'
         @room.password_confirmation = 'a12345678'
         @room.valid?
-        expect(@room.errors.full_messages).to include("Password confirmationとPasswordの入力が一致しません")
+        expect(@room.errors.full_messages).to include('Password confirmationとPasswordの入力が一致しません')
       end
       it 'passwordが73文字以上では登録できない' do
         @room.password = '1a' + Faker::Internet.password(min_length: 73)
         @room.password_confirmation = @room.password
         @room.valid?
-        expect(@room.errors.full_messages).to include("Passwordは72文字以内で入力してください")
+        expect(@room.errors.full_messages).to include('Passwordは72文字以内で入力してください')
       end
     end
   end

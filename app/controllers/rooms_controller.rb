@@ -36,7 +36,8 @@ class RoomsController < ApplicationController
     redirect_to rooms_path
   end
 
-  private 
+  private
+
   def room_params
     params.require(:room).permit(:name, :password, :password_confirmation, :user).merge(user_id: current_user.id)
   end
