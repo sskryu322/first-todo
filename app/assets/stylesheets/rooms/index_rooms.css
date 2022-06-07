@@ -106,8 +106,83 @@ input[type="submit"].search-btn {
 
 .room-list {
   width: 60%;
-  height: 50vh;
+  height: auto;
   margin: 0 auto;
   background-color: white;
   border-radius: 10px;
+  padding: 20px 50px 30px;
+}
+
+.room-list-supplement {
+  text-align: right;
+  font-size: 15px;
+  margin-bottom: 3px;
+  color: #555555;
+}
+
+.room {
+  display: flex;
+  padding: 5px 20px 5px 30px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+}
+
+.room-name{
+  width: 55%;
+  padding-right: 5px;
+}
+
+.room-name a {
+  font-size: 15px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.room-nickname {
+  font-size: 12px;
+  padding: 5px 5px 0 0;
+  width: 45%;
+  color: #555555;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.room-date {
+  padding-top: 3px;
+  font-size: 10px;
+  text-align: right;
+  color: #555555;
+}
+
+.btn-position {
+  width: 100%;
+  text-align: center;
+}
+
+.room-destroy-button {
+  height: 40px;
+  width: 35%;
+  padding: 5px;
+  margin: 20px 10px 0 10px;
+  background: #3ccace;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 10px;
+  border: 2px solid #CCC;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.room-destroy-button a {
+  width: 30%;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  height: 40px;
+  line-height: 30px;
+  width: 100%;
+  display: block;
+  
 }

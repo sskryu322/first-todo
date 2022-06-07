@@ -3,14 +3,29 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.all.order(created_at: 'desc')
+    @room = Room.new
   end
 
   def create
     @room = Room.new(room_params)
-    if @room.save
+    @rooms = Room.all.order(created_at: 'desc')
+    if @room.user_id == current_user.id && @room.save
       redirect_to rooms_path
     else
       render :index
+    end
+  end
+
+  def edit
+    @room = Room.find(params[:id])
+  end
+
+  def update
+    @room = Room.find(params[:id])
+    if @room.update(room_params)
+      redirect_to rooms_path
+    else
+      render :edit
     end
   end
 

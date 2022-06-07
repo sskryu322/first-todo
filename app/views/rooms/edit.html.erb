@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <%= render "shared/fourth-header" %>
+  <div class="page-title-show">Room編集</div>
+
+
+  <%= form_with model: @room, local: true do |f| %>
+    <div class="new-room-wrapper">
+      <%# エラーメッセージ%>
+      <%#= render 'shared/error_messages', model: f.object %>
+
+      <div class="article-post-room-index">
+        <label for="name">ルーム名(必須)</label><br>
+        <%= f.text_field :name, class:"title-content-room-index", placeholder:"（40文字まで)", maxlength:"40"%>
+      </div>
+      <div class="article-post-room-index">
+        <label for="password">ルームキー(必須)</label><br>
+        <%= f.password_field :password, class:"title-content-room-index", placeholder:"（ルームキーを設定してください)"%>
+      </div>
+      <div class="article-post-room-index">
+        <label for="password_confirmation">ルームキー(確認)</label><br>
+        <%= f.password_field :password_confirmation, class:"title-content-room-index", placeholder:"（同じキーを入力してください)"%>
+      </div>
+      <div class="register-field-room-index">
+        <%= f.submit class: "register-btn-room-index", value: "更新する" %>
+      </div>
+      <div class="btn-position">
+      <div class="room-destroy-button" id="hidden-btn" data=<%= @room.id %>>
+        <%= link_to "ルーム削除", room_path(@room.id), method: :delete, data: { confirm: 'ルームが削除されますがよろしいですか？'}%>
+      </div>
+      </div>
+    </div>   
+  <% end %>
+  <div class="btn_registration" id="btn_registration">
+    <%= link_to "ルームに戻る",  rooms_path, class: 'btn_registration' %>
+  </div>
+</div> 
+<%= render "shared/third-footer" %>
