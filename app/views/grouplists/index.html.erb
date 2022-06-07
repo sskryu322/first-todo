@@ -1,18 +1,18 @@
 <div class="wrapper">
-  <%= render "shared/third-header" %>
+  <%= render "shared/fourth-header" %>
   
 
   <div class="top-title">
     <div class="rooms-index">
       <%= link_to 'ルームを退室する', rooms_path, {class: "btn-shadow"}%>
     </div>
-    <div class="page-title">Room ToDo</div>
+    <div class="page-title"><%= "#{@room.name}" %></div>
   </div>
 
   <%# 新規投稿部分 %>
   <div class="flex-contents">
     <div class="side-var">
-      <%= form_with model: @grouplist, local: true do |f| %>
+      <%= form_with model:[@room, @grouplist], local: true do |f| %>
       <%# メッセージ%>
       <div class="flash-index"><%= flash[:notice] %></div>
       <%# エラーメッセージ%>
@@ -40,7 +40,7 @@
         <%= date.day %>
         <% grouplists.each do |grouplist| %>
 		      <div class="calendar-schedule">
-		        <%= link_to grouplist.title, grouplist_path(grouplist.id) %>
+		        <%= link_to grouplist.title, room_grouplist_path(grouplist.room_id, grouplist.id) %>
 		      </div>
 		    <% end %>
       <% end %>
@@ -53,7 +53,7 @@
       <% @grouplists.each do |grouplist| %>
         <div class="article" id="article-list">
           <div class="article-overview">
-            <%= link_to grouplist_path(grouplist.id) do %>
+            <%= link_to room_grouplist_path(grouplist.room_id, grouplist.id) do %>
               <p class="article-post-date">
                 <%= grouplist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
               </p>
@@ -65,11 +65,11 @@
             <div class="article-information">
               <div class="article-check">
                 <%# if Check.where(user_id: current_user.id, mylist_id: mylist.id).exists? %>
-                  <div class="article-edit-button" id="edit" data=<%= @mylist.id %>>
-                    <%= link_to "編集", edit_grouplist_path(grouplist.id)%>
+                  <div class="article-edit-button" id="edit" data=<%= @grouplist.id %>>
+                    <%= link_to "編集", edit_room_grouplist_path(grouplist.room_id, grouplist.id)%>
                   </div>
-                  <div class="article-check-button" id="hidden-btn" data=<%= @mylist.id %>>
-                    <%= link_to "完了", grouplist_path(grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
+                  <div class="article-check-button" id="hidden-btn" data=<%= @grouplist.id %>>
+                    <%= link_to "完了", room_grouplist_path(grouplist.room_id, grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
                   </div>
                 <%# end %>
               </div>
@@ -88,4 +88,4 @@
   </div>
   
 </div> 
-<%= render "shared/second-footer" %> 
+<%= render "shared/third-footer" %> 

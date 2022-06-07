@@ -43,7 +43,7 @@
     <% @rooms.each do |room| %>
       <div class="room">
         <div class="room-name">
-          <%= link_to room.name, grouplists_path %>
+          <%= link_to room.name, room_grouplists_path(room.id) %>
         </div>
         <div class="room-nickname">
           <% if current_user.id == room.user.id %>

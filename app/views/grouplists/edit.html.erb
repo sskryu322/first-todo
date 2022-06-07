@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <%= render "shared/fifth-header" %>
+  <div class="page-title-show">ToDo編集</div>
+
+  <div class="main-contents-show">
+    <div class="article-show" id="article-list">
+      <%= form_with model: [@room, @grouplist], local: true do |f| %>
+      <%# エラーメッセージ%>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="article-post-date-edit">
+          <label for="title">タイトル(必須)</label><br>
+          <%= f.text_field :title, class:"title-content-edit", placeholder:"（40文字まで)", maxlength:"40"%>
+        </div>
+        <div class="article-title-edit">
+          <label for="start_time">日付(必須)</label><br>
+          <%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%>
+        </div>
+        <div class="article-text-edit">
+          <label for="text">詳細</label><br>
+          <%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%>
+        </div>
+        <div class="article-image-edit">
+          <label for="image">画像</label>
+          <p class="file-field"><%= f.file_field :image, class: "image-edit"%></p>
+        </div>
+        <div class="register-field-edit">
+          <%= f.submit class: "register-btn-edit" %>
+         </div>
+      <% end %>
+    </div>
+  </div>
+  
+  <% if user_signed_in? %>
+    <div class="btn_registration" id="btn_registration">
+      <%= link_to "ルームページに戻る",  room_grouplists_path(@room.id), class: 'btn_registration' %>
+    </div>
+  <% end %>
+</div> 
+<%= render "shared/fourth-footer" %>

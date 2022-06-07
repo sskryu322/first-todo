@@ -28,6 +28,7 @@ class MylistsController < ApplicationController
 
   def update
     if @mylist.update(mylists_params)
+      flash[:notice] = '♫予定を更新しました♫'
       redirect_to mylists_path(params[:id])
     else
       render :edit
