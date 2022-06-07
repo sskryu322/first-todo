@@ -61,17 +61,18 @@
                 <%= grouplist.title%>
               </p>
               
-            <% end %>
+          <% end %>
             <div class="article-information">
-              <div class="article-check">
-                <%# if Check.where(user_id: current_user.id, mylist_id: mylist.id).exists? %>
-                  <div class="article-edit-button" id="edit" data=<%= @grouplist.id %>>
+              <div class="article-check-room-index">
+                  <div class="article-edit-button-room" id="edit" data=<%= grouplist.id %>>
                     <%= link_to "編集", edit_room_grouplist_path(grouplist.room_id, grouplist.id)%>
                   </div>
-                  <div class="article-check-button" id="hidden-btn" data=<%= @grouplist.id %>>
+                  <div class="article-check-button-room" id="hidden-btn" data=<%= grouplist.id %>>
                     <%= link_to "完了", room_grouplist_path(grouplist.room_id, grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
                   </div>
-                <%# end %>
+                  <div class="article-check-button-contributor" id="hidden-btn" data=<%= grouplist.id %>>
+                    <%= link_to "投稿:#{grouplist.user.nickname}さん",  user_path(grouplist.user_id)%>
+                  </div>
               </div>
             </div>
           </div>

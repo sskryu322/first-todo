@@ -5,7 +5,12 @@
 /* ヘッダー全体 */
 .top_page_header {
   background-color: #fff;
-  height: 80px;
+  height: 90px;
+  width: 100%;
+  opacity: 0.9;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
 }
 
 /* 左のヘッダー */
