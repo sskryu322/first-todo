@@ -58,7 +58,5 @@ class MylistsController < ApplicationController
   def move_to_index
     @mylist = Mylist.find(params[:id])
     redirect_to action: :index unless current_user.id == @mylist.user_id
-
-
   end
 end

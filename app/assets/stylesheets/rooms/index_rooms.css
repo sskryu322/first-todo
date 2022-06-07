@@ -134,6 +134,7 @@ input[type="submit"].search-btn {
 }
 
 .room-name a {
+  padding-top: 5px;
   font-size: 15px;
   display: block;
   white-space: nowrap;
@@ -148,6 +149,7 @@ input[type="submit"].search-btn {
   white-space: nowrap;
   overflow: hidden;
 }
+
 
 .room-date {
   padding-top: 3px;
