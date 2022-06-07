@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :mylists, only: [:index, :create, :edit, :show, :update, :destroy]
   resources :users, only: :show
   resources :rooms, only: [:index, :create, :edit, :update, :destroy]
+  resources :grouplists, only: [:index, :create, :edit, :show, :update, :destroy]
 end

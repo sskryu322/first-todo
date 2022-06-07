@@ -1,0 +1,91 @@
+<div class="wrapper">
+  <%= render "shared/third-header" %>
+  
+
+  <div class="top-title">
+    <div class="rooms-index">
+      <%= link_to 'ルームを退室する', rooms_path, {class: "btn-shadow"}%>
+    </div>
+    <div class="page-title">Room ToDo</div>
+  </div>
+
+  <%# 新規投稿部分 %>
+  <div class="flex-contents">
+    <div class="side-var">
+      <%= form_with model: @grouplist, local: true do |f| %>
+      <%# メッセージ%>
+      <div class="flash-index"><%= flash[:notice] %></div>
+      <%# エラーメッセージ%>
+      <div class="flash-index-error"><%= flash.now[:alert] %></div>
+      <div class="field row">
+        <P class="schedule-input-title">予定を登録する</P>
+        <label for="title">タイトル(必須)</label>
+        <p><%= f.text_field :title, class:"title-content", placeholder:"（40文字まで)", maxlength:"40"%></p>
+        <label for="start_time">日付(必須)</label>
+        <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%></p>
+        <label for="text">詳細</label>
+        <p><%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%></p>
+        <label for="image">画像</label>
+        <p class="file-field"><%= f.file_field :image, class: "image"%></p>
+      </div>
+      <div class="register-field">
+       <%= f.submit class: "register-btn" %>
+      </div>
+      <% end %>
+    </div>
+  
+   <%# カレンダー部分%>
+    <div class="calendar">
+      <%= month_calendar events: @grouplists do |date, grouplists| %>
+        <%= date.day %>
+        <% grouplists.each do |grouplist| %>
+		      <div class="calendar-schedule">
+		        <%= link_to grouplist.title, grouplist_path(grouplist.id) %>
+		      </div>
+		    <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <%# リスト表示部分 %>
+  <div class="main-contents">
+    <div class="articles">
+      <% @grouplists.each do |grouplist| %>
+        <div class="article" id="article-list">
+          <div class="article-overview">
+            <%= link_to grouplist_path(grouplist.id) do %>
+              <p class="article-post-date">
+                <%= grouplist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
+              </p>
+              <p class="article-title">
+                <%= grouplist.title%>
+              </p>
+              
+            <% end %>
+            <div class="article-information">
+              <div class="article-check">
+                <%# if Check.where(user_id: current_user.id, mylist_id: mylist.id).exists? %>
+                  <div class="article-edit-button" id="edit" data=<%= @mylist.id %>>
+                    <%= link_to "編集", edit_grouplist_path(grouplist.id)%>
+                  </div>
+                  <div class="article-check-button" id="hidden-btn" data=<%= @mylist.id %>>
+                    <%= link_to "完了", grouplist_path(grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
+                  </div>
+                <%# end %>
+              </div>
+            </div>
+          </div>
+          <% if grouplist.image.present? %>
+          <%= link_to grouplist.image, "data-lightbox" => grouplist.image do %>
+            <%= image_tag grouplist.image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+          <% end %>
+          <% else %>
+          <div class="no-image">noimege</div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
+</div> 
+<%= render "shared/second-footer" %> 
