@@ -38,12 +38,12 @@ RSpec.describe Mylist, type: :model do
       it 'titleが41文字以上では登録できない' do
         @mylist.title = 'あ' * 41
         @mylist.valid?
-        expect(@mylist.errors.full_messages).to include("Titleは40文字以内で入力してください")
+        expect(@mylist.errors.full_messages).to include('Titleは40文字以内で入力してください')
       end
       it 'textが201文字以上では登録できない' do
         @mylist.text = 'あ' * 201
         @mylist.valid?
-        expect(@mylist.errors.full_messages).to include("Textは200文字以内で入力してください")
+        expect(@mylist.errors.full_messages).to include('Textは200文字以内で入力してください')
       end
     end
   end

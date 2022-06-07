@@ -4,7 +4,6 @@ class MylistsController < ApplicationController
   before_action :ensure_correct_customer, only: [:edit, :update, :destroy]
 
   def index
-
     @mylist = Mylist.new
     @user = current_user
     @mylists = Mylist.where(user_id: current_user).order(start_time: 'asc')
@@ -59,7 +58,5 @@ class MylistsController < ApplicationController
   def move_to_index
     @mylist = Mylist.find(params[:id])
     redirect_to action: :index unless current_user.id == @mylist.user_id
-
-
   end
 end

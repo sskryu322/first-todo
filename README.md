@@ -15,8 +15,7 @@
 
 ### Association
 
-- has_many :room_users
-- has_many :rooms, through: :room_users
+- has_many :rooms
 - has_many :mylists
 - has_many :grouplists
 - has_many :messages
@@ -39,29 +38,16 @@
 
 ## rooms テーブル
 
-| Column           | Type   | Options     |
-| ---------------- | ------ | ----------- |
-| name             | string | null: false |
-| password_digest  | string | null: false |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| name             | string     | null: false                    |
+| password_digest  | string     | null: false                    |
+| user_id          | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_many :room_users
-- has_many :users, through: :room_users
-- has_many :grouplists
-
-
-## room_users テーブル
-
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| user_id  | references | null: false, foreign_key: true |
-| room_id  | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
 - belongs_to :user
+- has_many :grouplists
 
 
 ## grouplists テーブル
