@@ -20,6 +20,9 @@
             <span class="show-title">内容</span><br><%= "(投稿なし)"%>
           </p>
           <% end %>
+          <p class="article-text-show">
+            <span class="show-title">投稿者</span><br><%= link_to "#{@grouplist.user.nickname}さん",  user_path(@grouplist.user_id)%>
+          </p>
 
 
 

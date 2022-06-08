@@ -57,6 +57,9 @@
         </div>
       </div>
     <% end %>
+    <% if @rooms.count == 0 %>
+      <p class="search-nil">-ルームは見つかりませんでした-</p>
+    <% end %>
   </div>
 
 </div> 
