@@ -1,17 +1,18 @@
 <div class="wrapper">
-  <%= render "shared/third-header" %>
+  <%= render "shared/fifth-header" %>
   
+
   <div class="top-title">
     <div class="rooms-index">
-      <%= link_to 'ルームに移動する', rooms_path, {class: "btn-shadow"}%>
+      <%= link_to 'ルームを退室する', rooms_path, {class: "btn-shadow"}%>
     </div>
-    <div class="page-title">My ToDo</div>
+    <div class="page-title"><%= "#{@room.name}" %></div>
   </div>
 
   <%# 新規投稿部分 %>
   <div class="flex-contents">
     <div class="side-var">
-      <%= form_with model: @mylist, local: true do |f| %>
+      <%= form_with model:[@room, @grouplist], local: true do |f| %>
       <%# メッセージ%>
       <div class="flash-index"><%= flash[:notice] %></div>
       <%# エラーメッセージ%>
@@ -35,11 +36,11 @@
   
    <%# カレンダー部分%>
     <div class="calendar">
-      <%= month_calendar events: @user.mylists do |date, mylists| %>
+      <%= month_calendar events: @grouplists do |date, grouplists| %>
         <%= date.day %>
-        <% mylists.each do |mylist| %>
+        <% grouplists.each do |grouplist| %>
 		      <div class="calendar-schedule">
-		        <%= link_to mylist.title, mylist_path(mylist.id) %>
+		        <%= link_to grouplist.title, room_grouplist_path(grouplist.room_id, grouplist.id) %>
 		      </div>
 		    <% end %>
       <% end %>
@@ -49,34 +50,35 @@
   <%# リスト表示部分 %>
   <div class="main-contents">
     <div class="articles">
-      <% @mylists.each do |mylist| %>
+      <% @grouplists.each do |grouplist| %>
         <div class="article" id="article-list">
           <div class="article-overview">
-            <%= link_to mylist_path(mylist.id) do %>
+            <%= link_to room_grouplist_path(grouplist.room_id, grouplist.id) do %>
               <p class="article-post-date">
-                <%= mylist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
+                <%= grouplist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
               </p>
               <p class="article-title">
-                <%= mylist.title%>
+                <%= grouplist.title%>
               </p>
               
-            <% end %>
+          <% end %>
             <div class="article-information">
-              <div class="article-check">
-                <%# if Check.where(user_id: current_user.id, mylist_id: mylist.id).exists? %>
-                  <div class="article-edit-button" id="edit" data=<%= @mylist.id %>>
-                    <%= link_to "編集", edit_mylist_path(mylist.id)%>
+              <div class="article-check-room-index">
+                  <div class="article-edit-button-room" id="edit" data=<%= grouplist.id %>>
+                    <%= link_to "編集", edit_room_grouplist_path(grouplist.room_id, grouplist.id)%>
                   </div>
-                  <div class="article-check-button" id="hidden-btn" data=<%= @mylist.id %>>
-                    <%= link_to "完了", mylist_path(mylist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
+                  <div class="article-check-button-room" id="hidden-btn" data=<%= grouplist.id %>>
+                    <%= link_to "完了", room_grouplist_path(grouplist.room_id, grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
                   </div>
-                <%# end %>
+                  <div class="article-check-button-contributor" id="hidden-btn" data=<%= grouplist.id %>>
+                    <%= link_to "投稿:#{grouplist.user.nickname}さん",  user_path(grouplist.user_id)%>
+                  </div>
               </div>
             </div>
           </div>
-          <% if mylist.image.present? %>
-          <%= link_to mylist.image, "data-lightbox" => mylist.image do %>
-            <%= image_tag mylist.image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+          <% if grouplist.image.present? %>
+          <%= link_to grouplist.image, "data-lightbox" => grouplist.image do %>
+            <%= image_tag grouplist.image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
           <% end %>
           <% else %>
           <div class="no-image">noimege</div>
@@ -85,5 +87,6 @@
       <% end %>
     </div>
   </div>
+  
 </div> 
-<%= render "shared/second-footer" %> 
+<%= render "shared/fourth-footer" %> 

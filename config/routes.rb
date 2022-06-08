@@ -5,5 +5,11 @@ Rails.application.routes.draw do
   root to: 'homes#index'
   resources :mylists, only: [:index, :create, :edit, :show, :update, :destroy]
   resources :users, only: :show
-  resources :rooms, only: [:index, :create, :edit, :update, :destroy]
+  resources :rooms, only: [:index, :create, :edit, :update, :destroy] do
+    collection do
+      get 'search'
+    end
+    resources :grouplists, only: [:index, :create, :edit, :show, :update, :destroy]
+    
+  end
 end

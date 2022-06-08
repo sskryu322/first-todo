@@ -45,6 +45,11 @@ RSpec.describe Mylist, type: :model do
         @mylist.valid?
         expect(@mylist.errors.full_messages).to include('Textは200文字以内で入力してください')
       end
+      it 'userが紐付いていないと保存できない' do
+        @mylist.user = nil
+        @mylist.valid?
+        expect(@mylist.errors.full_messages).to include('Userを入力してください')
+      end
     end
   end
 end

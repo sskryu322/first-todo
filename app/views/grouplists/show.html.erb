@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <%= render "shared/fifth-header" %>
+  <div class="page-title-show">ToDo詳細</div>
+  
+  <div class="main-contents-show">
+      <div class="article-show" id="article-list">
+        
+          <p class="article-post-date-show">
+            <span class="show-title">日時</span><br><%= @grouplist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
+          </p>
+          <p class="article-title-show">
+            <span class="show-title">タイトル</span><br><%= @grouplist.title%>
+          </p>
+          <% if @grouplist.text.present? %>
+          <p class="article-text-show">
+            <span class="show-title">内容</span><br><%= @grouplist.text%>
+          </p>
+          <% else %>
+          <p class="article-text-show">
+            <span class="show-title">内容</span><br><%= "(投稿なし)"%>
+          </p>
+          <% end %>
+          <p class="article-text-show">
+            <span class="show-title">投稿者</span><br><%= link_to "#{@grouplist.user.nickname}さん",  user_path(@grouplist.user_id)%>
+          </p>
+
+
+
+           
+          <div class="article-information-show">
+            <div class="article-check-show">
+              <% if @grouplist.image.present? %>
+              <div class="image-title">画像</div>
+                <%= link_to @grouplist.image, "data-lightbox" => @grouplist.image do %>
+                  <%= image_tag @grouplist.image.variant(resize_to_fill: [800, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+                <% end %>
+              <% else %>
+              <div class="image-title">画像</div>
+              <div class="no-image-show">noimege</div>
+              <% end %>
+              <div class="flex-btn">
+                <div class="article-edit-button-show" id="edit" data=<%= @grouplist.id %>>
+                  <%= link_to "編集", edit_room_grouplist_path(@room.id, @grouplist.id)%>
+                </div>
+                <div class="article-check-button-show" id="hidden-btn" data=<%= @grouplist.id %>>
+                <%= link_to "完了", room_grouplist_path(@room.id, @grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    
+  </div>
+  <% if user_signed_in? %>
+      <div class="btn_registration" id="btn_registration">
+        <%= link_to "ルームページに戻る",  room_grouplists_path(@room.id), class: 'btn_registration' %>
+      </div>
+    <% end %>
+</div> 
+
+<%= render "shared/fourth-footer" %>
