@@ -10,7 +10,6 @@ RSpec.describe Grouplist, type: :model do
   describe 'todo投稿機能' do
     context '新規投稿できる場合' do
       it 'title、start_time、text、imageが存在していれば保存できる' do
-        
         expect(@grouplist).to be_valid
       end
       it 'text、imageが存在しなくても保存できる' do
@@ -51,12 +50,12 @@ RSpec.describe Grouplist, type: :model do
       it 'userが紐付いていないと保存できない' do
         @grouplist.user = nil
         @grouplist.valid?
-        expect(@grouplist.errors.full_messages).to include("Userを入力してください")
+        expect(@grouplist.errors.full_messages).to include('Userを入力してください')
       end
       it 'roomが紐付いていないと保存できない' do
         @grouplist.room = nil
         @grouplist.valid?
-        expect(@grouplist.errors.full_messages).to include("Roomを入力してください")
+        expect(@grouplist.errors.full_messages).to include('Roomを入力してください')
       end
     end
   end

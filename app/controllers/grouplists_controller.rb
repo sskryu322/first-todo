@@ -45,13 +45,12 @@ class GrouplistsController < ApplicationController
     @room = Room.find(params[:room_id])
     @grouplist = Grouplist.find(params[:id])
     @grouplist.destroy
-      flash[:notice] = '予定を削除しました'
-      redirect_to room_grouplists_path(@room.id)
-    
+    flash[:notice] = '予定を削除しました'
+    redirect_to room_grouplists_path(@room.id)
   end
 
   def grouplists_params
-    params.require(:grouplist).permit(:title, :start_time, :text, :user, :room, :image).merge(user_id: current_user.id, room_id: @room.id)
+    params.require(:grouplist).permit(:title, :start_time, :text, :user, :room, :image).merge(user_id: current_user.id,
+                                                                                              room_id: @room.id)
   end
-
 end

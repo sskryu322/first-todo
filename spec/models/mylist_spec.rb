@@ -48,7 +48,7 @@ RSpec.describe Mylist, type: :model do
       it 'userが紐付いていないと保存できない' do
         @mylist.user = nil
         @mylist.valid?
-        expect(@mylist.errors.full_messages).to include("Userを入力してください")
+        expect(@mylist.errors.full_messages).to include('Userを入力してください')
       end
     end
   end

@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @rooms = Room.all.order(created_at: 'desc')
     @room = Room.new
@@ -38,16 +38,13 @@ class RoomsController < ApplicationController
   # 検索機能
   def search
     @rooms = Room.search(params[:keyword])
-    
+
     @room = Room.new
   end
-
 
   private
 
   def room_params
     params.require(:room).permit(:name, :password, :password_confirmation, :user).merge(user_id: current_user.id)
   end
-
-  
 end
