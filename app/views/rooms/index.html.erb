@@ -47,7 +47,7 @@
         </div>
         <div class="room-nickname">
           <% if current_user.id == room.user.id %>
-            <%= link_to "ルームを編集する", edit_room_path(room.id)%>
+            <%= link_to "編集(#{current_user.nickname})", edit_room_path(room.id)%>
           <% else %>
             <%= "作成者：#{room.user.nickname}さん" %>
           <% end %>
