@@ -18,7 +18,7 @@
   margin: 30px auto 100px;
   height: 100%;
   width: 70%;
-  background: #DDDDDD;
+  background: #FFF;
   padding: 30px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -26,12 +26,12 @@
 }
 
 .show-title {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .article-post-date-show {
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   color: #555555;
   white-space: nowrap;
   border-bottom: solid 2px #555555;
@@ -85,11 +85,11 @@
 }
 
 .no-image-show {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   width: 100%;
   line-height: 100px;
-  color: white;
+  color: #6633FF;
   text-decoration: underline;
 }
 

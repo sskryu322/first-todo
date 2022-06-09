@@ -6,10 +6,10 @@ class GrouplistsController < ApplicationController
     @grouplist = Grouplist.new
     @room = Room.find(params[:room_id])
     @grouplists = Grouplist.where(room_id: @room.id).order(start_time: 'asc')
+    
   end
 
   def edit
-    
     @room = Room.find(params[:room_id])
     @grouplist = Grouplist.find(params[:id])
   end
@@ -30,6 +30,8 @@ class GrouplistsController < ApplicationController
   def show
     @room = Room.find(params[:room_id])
     @grouplist = Grouplist.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.where(grouplist_id: @grouplist.id, room_id: @grouplist.room_id).order(updated_at: 'desc')
   end
 
   def update

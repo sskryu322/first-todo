@@ -18,7 +18,7 @@
       </div>
       <div class="article-post-room-index">
         <label for="password_confirmation">ルームキー(確認)</label><br>
-        <%= f.password_field :password_confirmation, class:"title-content-room-index", placeholder:"（同じキーを入力してください)"%>
+        <%= f.text_field :password_confirmation, class:"title-content-room-index", placeholder:"（同じキーを入力してください)"%>
       </div>
       <div class="register-field-room-index">
         <%= f.submit class: "register-btn-room-index", value: "ルームを作成する" %>
@@ -39,7 +39,7 @@
 
   <%# ルーム一覧 %> 
   <div class="room-list">
-    <div class="room-list-supplement">(作成日順)</div>
+    <div class="room-list-supplement">(作成日時順)</div>
     <% @rooms.each do |room| %>
       <div class="room">
         <div class="room-name">

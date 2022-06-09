@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   position: relative;
   padding-top: 90px;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
   /*←footerの高さ*/
   box-sizing: border-box;
   /*←全て含めてmin-height:100vhに*/
@@ -118,7 +118,7 @@ body {
 
 .btn_registration{
   text-decoration: none;
-  height: 60px;
+  height: 50px;
   width: 350px;
   display: flex;
   justify-content: center;

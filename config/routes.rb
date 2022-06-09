@@ -11,8 +11,9 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :grouplists, only: [:index, :create, :edit, :show, :update, :destroy]
-    resources :comments, only: [:create, :edit, :update, :destroy]
+    resources :grouplists, only: [:index, :create, :edit, :show, :update, :destroy] do
+     resources :comments, only: [:create, :edit, :update, :destroy]
+    end
   end
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

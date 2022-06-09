@@ -75,7 +75,9 @@
 | text          | string     | null: false                    |
 | user_id       | references | null: false, foreign_key: true |
 | grouplist_id  | references | null: false, foreign_key: true |
+| room_id       | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 - belongs_to :grouplist
+- belongs_to :room

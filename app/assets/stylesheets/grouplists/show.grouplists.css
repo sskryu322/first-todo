@@ -1,0 +1,182 @@
+.comment-title {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.comments-field {
+  width: 70%;
+  height: auto;
+  background-color: #FFF;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+}
+
+.room-list-title {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  height: 30px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.room-list-comment {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #D9E5FF;
+  border-radius: 10px;
+  padding: 20px 30px 20px;
+}
+
+.room-list-supplement {
+  text-align: right;
+  font-size: 15px;
+  margin-bottom: 3px;
+  color: #555555;
+}
+
+.room-comment {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 10px 5px 0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 2px solid #CCC;
+  height: auto;
+  width: 100%;
+  background-color: #66FF66;
+}
+
+.room-comment:nth-child(even){
+  background-color: #FFF;
+}
+
+.room-text{
+  width: 55%;
+  height: 100%;
+  padding-right: 5px;
+}
+
+.room-name a {
+  
+  font-size: 16px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+.room-nickname-comment {
+  font-size: 14px;
+  padding-top: 20px;
+  width: 23%;
+  color: #555555;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+
+.room-date-comment {
+  width: 10%;
+  padding-top: 12px;
+  font-size: 11px;
+  text-align: right;
+  color: #555555;
+}
+
+
+/* コメント入力部分 */
+.comment-room-wrapper {
+  background-color: #CCC;
+  width: 100%;
+  display: flex;
+  opacity: 0.8;
+  position: fixed; 
+  bottom: 10px;
+  left: 0; 
+}
+
+.article-post-comment {
+  color: #555555;
+  width: 50%;
+  margin-left: 350px;
+}
+
+.title-content-comment {
+  padding: 5px 10px;
+  white-space: nowrap;
+  
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  display: inline-block;
+}
+
+input[type="text"].title-content-comment {
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: break-all;
+}
+
+.register-field-comment {
+  width: 30%;
+}
+
+.register-btn-comment {
+  color: #FFF;
+  display: inline-block;
+  width: 30%;
+  height: 70px;
+  padding: 5px;
+  margin-top: 30px;
+  background: #3ccace;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  border: 2px solid #CCC;
+  cursor: pointer;
+}
+
+.main-contents-comment {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* コメント編集 */
+.main-contents-show {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.article-show {
+  margin: 30px auto 100px;
+  height: 100%;
+  width: 70%;
+  background: #FFF;
+  padding: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+}
+
+.register-btn-edit-comment{
+  height: 40px;
+  width: 100%;
+  padding-bottom: 8px;
+  background: #3ccace;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 15px;
+  border: none;
+}
