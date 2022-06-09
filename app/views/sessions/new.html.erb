@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <%= render "shared/fourth-header" %>
+  <div class="page-title-show">Room認証</div>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+    <div class="new-room-wrapper">
+      <%# エラーメッセージ%>
+      <div class="flash-index-error"><%= flash.now[:alert] %></div>
+
+      <div class="article-post-room-key">
+        <div class="room-key-title"><%= %></div>
+      </div>
+      <div class="article-post-room-key">
+        <label for="name">ルーム名(必須)</label><br>
+        <%= f.text_field :name, class:"title-content-room-index", placeholder:"（ルーム名を入力してください)"%>
+      </div>
+      <div class="article-post-room-key">
+        <label for="password">ルームキー(必須)</label><br>
+        <%= f.password_field :password, class:"title-content-room-index", placeholder:"（キーを入力してください)"%>
+      </div>
+      <div class="register-field-room-index">
+        <%= f.submit class: "register-btn-room-index", value: "入室する" %>
+      </div>
+    </div>   
+  <% end %>
+</div> 
+<%= render "shared/third-footer" %>

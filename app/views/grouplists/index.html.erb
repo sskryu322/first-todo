@@ -1,4 +1,5 @@
 <div class="wrapper">
+<% if logged_in? %>
   <%= render "shared/fifth-header" %>
   
 
@@ -90,3 +91,9 @@
   
 </div> 
 <%= render "shared/fourth-footer" %> 
+<% else %>
+<%= render "shared/third-header" %>
+<p>タスクの管理ができるアプリです。まずはログインをしてください。</p>
+<%= link_to "ログイン", login_path%>
+<%= render "shared/second-footer" %> 
+<% end %>

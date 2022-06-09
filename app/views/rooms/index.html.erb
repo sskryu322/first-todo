@@ -43,11 +43,11 @@
     <% @rooms.each do |room| %>
       <div class="room">
         <div class="room-name">
-          <%= link_to room.name, room_grouplists_path(room.id) %>
+          <%= link_to room.name, login_path%>
         </div>
         <div class="room-nickname">
           <% if current_user.id == room.user.id %>
-            <%= link_to "ルームを編集する", edit_room_path(room.id) %>
+            <%= link_to "ルームを編集する", edit_room_path(room.id)%>
           <% else %>
             <%= "作成者：#{room.user.nickname}さん" %>
           <% end %>
