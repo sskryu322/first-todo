@@ -199,3 +199,20 @@ input[type="submit"].search-btn {
   text-decoration: underline;
   padding: 0 40px 5px 0;
 }
+
+/* ルーム認証 */
+.article-post-room-key {
+  color: #555555;
+}
+
+.room-key-title {
+  font-size: 25px;
+  padding: 30px 0 10px 0;
+  width: 70%;
+}
+
+.article-post-room-key {
+  font-size: 20px;
+  width: 50%;
+  margin: 0 auto;
+}

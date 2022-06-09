@@ -1,5 +1,5 @@
 class MylistsController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!
   before_action :move_to_index, only: [:show, :edit, :update, :destroy]
   before_action :ensure_correct_customer, only: [:edit, :update, :destroy]
 
