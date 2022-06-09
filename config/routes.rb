@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'search'
     end
     resources :grouplists, only: [:index, :create, :edit, :show, :update, :destroy]
+    resources :comments, only: [:create, :edit, :update, :destroy]
   end
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

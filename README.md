@@ -68,13 +68,13 @@
 - has_one_attached :image
 
 
-## messages テーブル
+## comments テーブル
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| content  | string     | null: true                     |
-| user_id  | references | null: false, foreign_key: true |
-| room_id  | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| text          | string     | null: false                    |
+| user_id       | references | null: false, foreign_key: true |
+| grouplist_id  | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
