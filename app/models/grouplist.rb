@@ -1,5 +1,5 @@
 class Grouplist < ApplicationRecord
-  has_many :comments,dependent: :destroy
+  has_many :comments, dependent: :destroy
   belongs_to :user
   belongs_to :room
   has_one_attached :image

@@ -43,14 +43,14 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
-    params.require(:comment).permit(:text, :user, :grouplist, :room).merge(user_id: current_user.id, grouplist_id: params[:grouplist_id], room_id: params[:room_id])
+    params.require(:comment).permit(:text, :user, :grouplist, :room).merge(user_id: current_user.id,
+                                                                           grouplist_id: params[:grouplist_id], room_id: params[:room_id])
   end
 
   def logged_in_room
     @room = Room.find(params[:room_id])
-    unless logged_in? && current_room.id == @room.id
-      redirect_to login_path
-    end
+    redirect_to login_path unless logged_in? && current_room.id == @room.id
   end
 end
