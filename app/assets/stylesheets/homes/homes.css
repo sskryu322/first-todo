@@ -14,7 +14,7 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 90px 0 70px ;
+  padding: 75px 0 100px ;
   /*←footerの高さ*/
   box-sizing: border-box;
   /*←全て含めてmin-height:100vhに*/
@@ -64,7 +64,7 @@ body {
 
 .possible_colum_1{
   margin-top: 80px;
-  margin-bottom: 60px;
+  margin-bottom: 150px;
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -78,7 +78,7 @@ body {
   justify-content: space-around;
   text-align: left;
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: 150px;
 }
 
 .possible_colum_3{
@@ -86,7 +86,7 @@ body {
   justify-content: space-around;
   text-align: left;
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .possible_colum_1 p, .possible_colum_2 p, .possible_colum_3 p {
@@ -139,6 +139,18 @@ body {
   -10px -10px 20px #ffffff;
   cursor: pointer;
   font-weight: bold;
+}
+/* フェードイン */
+.animation {
+  opacity : 0;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(80px);
+}
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 /* 通常時はスマホサイズ以下を非表示 */
