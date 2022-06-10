@@ -131,6 +131,7 @@ form input[type="submit"].register-btn {
   height: auto;
   background-color: white;
   border-radius: 10px;
+  padding-top: 18px;
 }
 
 .calendar-title {

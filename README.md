@@ -18,7 +18,7 @@
 - has_many :rooms
 - has_many :mylists
 - has_many :grouplists
-- has_many :messages
+- has_many :comments
 
 
 ## mylists テーブル
@@ -62,7 +62,7 @@
 
 ### Association
 
-- has_many :messages
+- has_many :comments
 - belongs_to :user
 - belongs_to :room
 - has_one_attached :image

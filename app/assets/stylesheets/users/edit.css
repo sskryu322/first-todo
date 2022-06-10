@@ -35,7 +35,13 @@
 }
 
 .text-content {
-  font-size: 1.2rem;
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  font-size: 15px;
 }
 
 .form-text-wrap-edit {
