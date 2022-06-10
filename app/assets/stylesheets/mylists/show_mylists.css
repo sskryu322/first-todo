@@ -8,7 +8,7 @@
 
 
 .main-contents-show {
-  height: 100%;
+  height: 70%;
   width: 100%;
   margin-bottom: 100px;
 }
@@ -16,8 +16,8 @@
 
 .article-show {
   margin: 30px auto 100px;
-  height: 100%;
-  width: 70%;
+  height: 70%;
+  width: 60%;
   background: #FFF;
   padding: 30px;
   margin-bottom: 10px;
@@ -47,8 +47,7 @@
   color: #555555;
   font-weight: bold;
   border-bottom: solid 2px #555555;
-  overflow-wrap: normal;
-  white-space: nowrap;
+  word-wrap:break-all;
   margin-bottom: 20px;
 }
 
@@ -59,16 +58,15 @@
   color: #555555;
   font-weight: bold;
   border-bottom: solid 2px #555555;
-  overflow-wrap: normal;
-  white-space: nowrap;
   margin-bottom: 20px;
+  word-wrap:break-all;
 }
 
 .article-information-show {
   height: auto;
   width: 100%;
   text-align: center;
-  margin-left: 280px;
+  margin: 0 25%;
 }
 
 .article-check-show {

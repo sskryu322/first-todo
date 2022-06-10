@@ -107,7 +107,7 @@
 .title-content-comment {
   padding: 5px 10px;
   white-space: nowrap;
-  height: 80px;
+  height: 70px;
   width: 100%;
   border-radius: 10px;
   border: 1px solid #CCC;
@@ -147,22 +147,6 @@ input[type="text"].title-content-comment {
 }
 
 /* コメント編集 */
-.main-contents-show {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 100px;
-}
-
-.article-show {
-  margin: 30px auto 100px;
-  height: 100%;
-  width: 70%;
-  background: #FFF;
-  padding: 30px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: 1px solid #CCC;
-}
 
 .register-btn-edit-comment{
   height: 40px;

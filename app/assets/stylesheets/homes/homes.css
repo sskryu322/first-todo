@@ -14,8 +14,7 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding-top: 90px;
-  padding-bottom: 70px;
+  padding: 90px 50px 70px 50px;
   /*←footerの高さ*/
   box-sizing: border-box;
   /*←全て含めてmin-height:100vhに*/
@@ -65,7 +64,7 @@ body {
 
 .possible_colum_1{
   margin-top: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -79,7 +78,7 @@ body {
   justify-content: space-around;
   text-align: left;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .possible_colum_3{
@@ -87,10 +86,11 @@ body {
   justify-content: space-around;
   text-align: left;
   height: auto;
+  margin-bottom: 60px;
 }
 
 .possible_colum_1 p, .possible_colum_2 p, .possible_colum_3 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .possible_text{
@@ -104,8 +104,8 @@ body {
 
 /* 機能画像 */
 .contents-image{
-  width: 50vh;
-  height: 40vh;
+  width: 85vh;
+  height: 65vh;
   margin: 5px;
   padding: 10px;
   background-color: #FFF;
@@ -198,7 +198,7 @@ body {
   padding: 5px;
   font-size: 0.8rem;
 }
-/* トップイメージ */
+
 .demo_image{
   width: 100%;
   height: auto;
