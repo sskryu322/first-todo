@@ -45,13 +45,13 @@
   padding: 10px 10px 5px 0;
   margin-bottom: 15px;
   border-radius: 5px;
-  border: 2px solid #CCC;
+  border: 1px solid #CCC;
   height: auto;
   width: 100%;
   background-color: #66FF66;
 }
 
-.room-comment:nth-child(even){
+.room-comment:nth-child(odd){
   background-color: #FFF;
 }
 
@@ -62,7 +62,6 @@
 }
 
 .room-name a {
-  
   font-size: 16px;
   display: block;
   white-space: nowrap;
@@ -80,7 +79,6 @@
   
 }
 
-
 .room-date-comment {
   width: 10%;
   padding-top: 12px;
@@ -88,7 +86,6 @@
   text-align: right;
   color: #555555;
 }
-
 
 /* コメント入力部分 */
 .comment-room-wrapper {
@@ -110,7 +107,6 @@
 .title-content-comment {
   padding: 5px 10px;
   white-space: nowrap;
-  
   height: 80px;
   width: 100%;
   border-radius: 10px;
@@ -179,4 +175,10 @@ input[type="text"].title-content-comment {
   color: #FFF;
   font-size: 15px;
   border: none;
+}
+
+.not-comment-text {
+  text-align: center;
+  color: #555555;
+  padding: 0 10px 10px 0;
 }

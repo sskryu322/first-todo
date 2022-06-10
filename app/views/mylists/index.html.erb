@@ -7,7 +7,6 @@
     </div>
     <div class="page-title"><%= "#{current_user.nickname}のToDo"%></div>
   </div>
-
   <%# 新規投稿部分 %>
   <div class="flex-contents">
     <div class="side-var">
@@ -32,7 +31,6 @@
       </div>
       <% end %>
     </div>
-  
    <%# カレンダー部分%>
     <div class="calendar">
       <%= month_calendar events: @user.mylists do |date, mylists| %>
@@ -45,7 +43,6 @@
       <% end %>
     </div>
   </div>
-
   <%# リスト表示部分 %>
   <div class="main-contents">
     <div class="articles">
@@ -59,27 +56,24 @@
               <p class="article-title">
                 <%= mylist.title%>
               </p>
-              
             <% end %>
             <div class="article-information">
               <div class="article-check">
-                <%# if Check.where(user_id: current_user.id, mylist_id: mylist.id).exists? %>
                   <div class="article-edit-button" id="edit" data=<%= @mylist.id %>>
                     <%= link_to "編集", edit_mylist_path(mylist.id)%>
                   </div>
                   <div class="article-check-button" id="hidden-btn" data=<%= @mylist.id %>>
                     <%= link_to "完了", mylist_path(mylist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
                   </div>
-                <%# end %>
               </div>
             </div>
           </div>
           <% if mylist.image.present? %>
-          <%= link_to mylist.image, "data-lightbox" => mylist.image do %>
+            <%= link_to mylist.image, "data-lightbox" => mylist.image do %>
             <%= image_tag mylist.image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
-          <% end %>
+            <% end %>
           <% else %>
-          <div class="no-image">noimege</div>
+            <div class="no-image">noimege</div>
           <% end %>
         </div>
       <% end %>

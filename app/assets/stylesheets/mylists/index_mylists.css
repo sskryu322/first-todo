@@ -141,6 +141,7 @@ form input[type="submit"].register-btn {
 .calendar-heading {
   text-align: center;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .calendar-heading a {

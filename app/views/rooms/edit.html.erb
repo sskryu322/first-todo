@@ -2,12 +2,10 @@
   <%= render "shared/fourth-header" %>
   <div class="page-title-show">Room編集</div>
 
-
   <%= form_with model: @room, local: true do |f| %>
     <div class="new-room-wrapper">
       <%# エラーメッセージ%>
       <%= render 'shared/error_messages', model: f.object %>
-
       <div class="article-post-room-index">
         <label for="name">ルーム名(必須)</label><br>
         <%= f.text_field :name, class:"title-content-room-index", placeholder:"（40文字まで)", maxlength:"40"%>

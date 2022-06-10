@@ -1,5 +1,6 @@
 class MylistsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_mylist, only: [:edit, :show, :ensure_correct_customer]
   before_action :move_to_index, only: [:show, :edit, :update, :destroy]
   before_action :ensure_correct_customer, only: [:edit, :update, :destroy]
 
@@ -10,7 +11,6 @@ class MylistsController < ApplicationController
   end
 
   def edit
-    @mylist = Mylist.find(params[:id])
   end
 
   def create
@@ -36,7 +36,6 @@ class MylistsController < ApplicationController
   end
 
   def show
-    @mylist = Mylist.find(params[:id])
   end
 
   def destroy
@@ -47,8 +46,11 @@ class MylistsController < ApplicationController
 
   private
 
-  def ensure_correct_customer
+  def set_mylist
     @mylist = Mylist.find(params[:id])
+  end
+
+  def ensure_correct_customer
     redirect_to mylists_path unless @mylist.user_id == current_user.id
   end
 

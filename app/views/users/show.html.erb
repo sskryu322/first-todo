@@ -1,68 +1,64 @@
 <div class="wrapper">
   <%= render "shared/third-header" %>
   <div class="edit-wrap">
-  <div class='form-wrap-edit'>
-    <div class='form-header'>
-      <h1 class='form-header-text-edit'>
+    <div class='form-wrap-edit'>
+      <div class='form-header'>
+        <h1 class='form-header-text-edit'>
         <%= "#{@user.nickname}のプロフィール" %>
-      </h1>
-    </div>
+        </h1>
+      </div>
   
-    <div class="form-group-edit">
-      <div class='form-text-wrap-edit'>
-        <label class="form-text-edit">ニックネーム</label>
+      <div class="form-group-edit">
+        <div class='form-text-wrap-edit'>
+          <label class="form-text-edit">ニックネーム</label>
+        </div>
+        <span class="text-content"><%= @user.nickname %></span>
       </div>
-      <span class="text-content"><%= @user.nickname %></span>
-    </div>
-    <div class="form-group-edit">
-      <div class='form-text-wrap-edit'>
-        <label class="form-text-edit">お名前</label>
+      <div class="form-group-edit">
+        <div class='form-text-wrap-edit'>
+          <label class="form-text-edit">お名前</label>
+        </div>
+        <% if @user.first_name.blank? && @user.last_name.blank? %>
+          <span class="text-content"><%= '-未登録-' %></span>
+        <% else %>
+          <span class="text-content"><%= @user.first_name %></span>
+          <span class="text-content"><%= @user.last_name %></span>
+        <% end %>
       </div>
-      <% if @user.first_name.blank? && @user.last_name.blank? %>
-      <span class="text-content"><%= '-未登録-' %></span>
-      <% else %>
-      <span class="text-content"><%= @user.first_name %></span>
-      <span class="text-content"><%= @user.last_name %></span>
-      <% end %>
-    </div>
-    <div class="form-group-edit">
-      <div class='form-text-wrap-edit'>
-        <label class="form-text-edit">部署/店舗/チームなど</label>
+      <div class="form-group-edit">
+        <div class='form-text-wrap-edit'>
+          <label class="form-text-edit">部署/店舗/チームなど</label>
+        </div>
+        <% if @user.first_name.blank? && @user.last_name.blank? %>
+          <span class="text-content"><%= '-未登録-' %></span>
+        <% else %>
+          <span class="text-content"><%= @user.department %></span>
+        <% end %>
       </div>
-      <% if @user.first_name.blank? && @user.last_name.blank? %>
-      <span class="text-content"><%= '-未登録-' %></span>
-      <% else %>
-      <span class="text-content"><%= @user.department %></span>
-      <% end %>
-    </div>
-    <div class="form-group-edit">
-      <div class='form-text-wrap-edit'>
-        <label class="form-text-edit">役職/担当/資格など</label>
+      <div class="form-group-edit">
+        <div class='form-text-wrap-edit'>
+          <label class="form-text-edit">役職/担当/資格など</label>
+        </div>
+        <% if @user.first_name.blank? && @user.last_name.blank? %>
+          <span class="text-content"><%= '-未登録-' %></span>
+        <% else %>
+          <span class="text-content"><%= @user.position %></span>
+        <% end %>
       </div>
-      <% if @user.first_name.blank? && @user.last_name.blank? %>
-      <span class="text-content"><%= '-未登録-' %></span>
-      <% else %>
-      <span class="text-content"><%= @user.position %></span>
-      <% end %>
+      <br><br>
     </div>
-    <br><br>
-  </div>
   
     <% if current_user.id == @user.id %>
       <div class="btn_registration" id="btn_registration">
         <%= link_to "編集する", edit_user_registration_path, class: 'btn_registration' %>
       </div>
     <% end %>
-    <% if user_signed_in? %>
-      <div class="btn_registration" id="btn_registration">
-        <%= link_to "マイページに戻る",  mylists_path, class: 'btn_registration' %>
-      </div>
-      <div class="btn_registration" id="btn_registration">
-        <%= link_to "ルーム一覧ページへ移動",  rooms_path, class: 'btn_registration' %>
-      </div>
-    <% end %>
-    
+    <div class="btn_registration" id="btn_registration">
+      <%= link_to "マイページに戻る",  mylists_path, class: 'btn_registration' %>
+    </div>
+    <div class="btn_registration" id="btn_registration">
+      <%= link_to "ルーム一覧ページへ移動",  rooms_path, class: 'btn_registration' %>
+    </div>
   </div>
-  
 </div>
 <%= render "shared/second-footer" %>

@@ -2,12 +2,10 @@
   <%= render "shared/fourth-header" %>
   <div class="page-title-show">Roomページ</div>
 
-
   <%= form_with model: @room, local: true do |f| %>
     <div class="new-room-wrapper">
       <%# エラーメッセージ%>
       <%= render 'shared/error_messages', model: f.object %>
-
       <div class="article-post-room-index">
         <label for="name">ルーム名(必須)</label><br>
         <%= f.text_field :name, class:"title-content-room-index", placeholder:"（40文字まで)", maxlength:"40"%>
@@ -18,7 +16,7 @@
       </div>
       <div class="article-post-room-index">
         <label for="password_confirmation">ルームキー(確認)</label><br>
-        <%= f.text_field :password_confirmation, class:"title-content-room-index", placeholder:"（同じキーを入力してください)"%>
+        <%= f.password_field :password_confirmation, class:"title-content-room-index", placeholder:"（同じキーを入力してください)"%>
       </div>
       <div class="register-field-room-index">
         <%= f.submit class: "register-btn-room-index", value: "ルームを作成する" %>
@@ -28,7 +26,6 @@
 
   <div class="border"></div>
   <div class="room-list-title">Roomリスト</div>
-  
   <%# 検索欄 %>
   <div class="search-field">
     <%= form_with(url: search_rooms_path, local: true, method: :get, class: "search-form") do |form| %>
@@ -36,28 +33,26 @@
       <%= form.submit "検索", class: "search-btn" %>
     <% end %>
   </div>
-
   <%# ルーム一覧 %> 
   <div class="room-list">
     <div class="room-list-supplement">(作成日時順)</div>
-    <% @rooms.each do |room| %>
-      <div class="room">
-        <div class="room-name">
-          <%= link_to room.name, login_path%>
+      <% @rooms.each do |room| %>
+        <div class="room">
+          <div class="room-name">
+            <%= link_to room.name, login_path%>
+          </div>
+          <div class="room-nickname">
+            <% if current_user.id == room.user.id %>
+              <%= link_to "編集(#{current_user.nickname})", edit_room_path(room.id)%>
+            <% else %>
+              <%= "作成者：#{room.user.nickname}さん" %>
+            <% end %>
+          </div>
+          <div class="room-date">
+            <%= l room.created_at %>
+          </div>
         </div>
-        <div class="room-nickname">
-          <% if current_user.id == room.user.id %>
-            <%= link_to "編集(#{current_user.nickname})", edit_room_path(room.id)%>
-          <% else %>
-            <%= "作成者：#{room.user.nickname}さん" %>
-          <% end %>
-        </div>
-        <div class="room-date">
-          <%= l room.created_at %>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
   </div>
-
 </div> 
 <%= render "shared/third-footer" %>

@@ -3,57 +3,48 @@
   <div class="page-title-show">ToDo詳細</div>
   
   <div class="main-contents-show">
-      <div class="article-show" id="article-list">
-        
-          <p class="article-post-date-show">
-            <span class="show-title">日時</span><br><%= @mylist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
-          </p>
-          <p class="article-title-show">
-            <span class="show-title">タイトル</span><br><%= @mylist.title%>
-          </p>
-          <% if @mylist.text.present? %>
-          <p class="article-text-show">
-            <span class="show-title">内容</span><br><%= @mylist.text%>
-          </p>
-          <% else %>
-          <p class="article-text-show">
-            <span class="show-title">内容</span><br><%= "(投稿なし)"%>
-          </p>
-          <% end %>
-
-
-
+    <div class="article-show" id="article-list">
+      <p class="article-post-date-show">
+        <span class="show-title">日時</span><br><%= @mylist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
+      </p>
+      <p class="article-title-show">
+        <span class="show-title">タイトル</span><br><%= @mylist.title%>
+      </p>
+      <% if @mylist.text.present? %>
+        <p class="article-text-show">
+          <span class="show-title">内容</span><br><%= @mylist.text%>
+        </p>
+      <% else %>
+        <p class="article-text-show">
+          <span class="show-title">内容</span><br><%= "(投稿なし)"%>
+        </p>
+      <% end %>
            
-          <div class="article-information-show">
-            <div class="article-check-show">
-              <% if @mylist.image.present? %>
-              <div class="image-title">画像</div>
-                <%= link_to @mylist.image, "data-lightbox" => @mylist.image do %>
-                  <%= image_tag @mylist.image.variant(resize_to_fill: [800, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
-                <% end %>
-              <% else %>
-              <div class="image-title">画像</div>
-              <div class="no-image-show">noimege</div>
+      <div class="article-information-show">
+        <div class="article-check-show">
+          <% if @mylist.image.present? %>
+            <div class="image-title">画像</div>
+              <%= link_to @mylist.image, "data-lightbox" => @mylist.image do %>
+                <%= image_tag @mylist.image.variant(resize_to_fill: [800, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
               <% end %>
-              <div class="flex-btn">
-                <div class="article-edit-button-show" id="edit" data=<%= @mylist.id %>>
-                  <%= link_to "編集", edit_mylist_path(@mylist.id)%>
-                </div>
-                <div class="article-check-button-show" id="hidden-btn" data=<%= @mylist.id %>>
+          <% else %>
+            <div class="image-title">画像</div>
+            <div class="no-image-show">noimege</div>
+          <% end %>
+            <div class="flex-btn">
+              <div class="article-edit-button-show" id="edit" data=<%= @mylist.id %>>
+                <%= link_to "編集", edit_mylist_path(@mylist.id)%>
+              </div>
+              <div class="article-check-button-show" id="hidden-btn" data=<%= @mylist.id %>>
                 <%= link_to "完了", mylist_path(@mylist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
-                </div>
               </div>
             </div>
-          </div>
-        
+        </div>
       </div>
-    
+    </div>
   </div>
-  <% if user_signed_in? %>
-      <div class="btn_registration" id="btn_registration">
-        <%= link_to "マイページに戻る",  mylists_path, class: 'btn_registration' %>
-      </div>
-    <% end %>
+  <div class="btn_registration" id="btn_registration">
+    <%= link_to "マイページに戻る",  mylists_path, class: 'btn_registration' %>
+  </div>
 </div> 
-
 <%= render "shared/second-footer" %>

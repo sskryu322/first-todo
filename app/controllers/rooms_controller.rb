@@ -1,14 +1,14 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_rooms, only: [:index, :create]
+  before_action :set_room, only: [:edit, :update]
 
   def index
-    @rooms = Room.all.order(created_at: 'desc')
     @room = Room.new
   end
 
   def create
     @room = Room.new(room_params)
-    @rooms = Room.all.order(created_at: 'desc')
     if @room.user_id == current_user.id && @room.save
       redirect_to rooms_path
     else
@@ -17,11 +17,9 @@ class RoomsController < ApplicationController
   end
 
   def edit
-    @room = Room.find(params[:id])
   end
 
   def update
-    @room = Room.find(params[:id])
     if @room.update(room_params)
       redirect_to rooms_path
     else
@@ -42,6 +40,14 @@ class RoomsController < ApplicationController
   end
 
   private
+
+  def set_rooms
+    @rooms = Room.all.order(created_at: 'desc')
+  end
+
+  def set_room
+    @room = Room.find(params[:id])
+  end
 
   def room_params
     params.require(:room).permit(:name, :password, :password_confirmation, :user).merge(user_id: current_user.id)

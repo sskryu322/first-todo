@@ -1,20 +1,18 @@
 class GrouplistsController < ApplicationController
   before_action :logged_in_room
   before_action :authenticate_user!
+  before_action :set_room
+  before_action :set_grouplist, only: [:edit, :show, :update, :destroy]
 
   def index
     @grouplist = Grouplist.new
-    @room = Room.find(params[:room_id])
     @grouplists = Grouplist.where(room_id: @room.id).order(start_time: 'asc')
   end
 
   def edit
-    @room = Room.find(params[:room_id])
-    @grouplist = Grouplist.find(params[:id])
   end
 
   def create
-    @room = Room.find(params[:room_id])
     @grouplist = Grouplist.new(grouplists_params)
     @grouplists = Grouplist.where(room_id: @room.id)
     if @grouplist.room_id == @room.id && @grouplist.save
@@ -27,15 +25,11 @@ class GrouplistsController < ApplicationController
   end
 
   def show
-    @room = Room.find(params[:room_id])
-    @grouplist = Grouplist.find(params[:id])
     @comment = Comment.new
     @comments = Comment.where(grouplist_id: @grouplist.id, room_id: @grouplist.room_id).order(updated_at: 'desc')
   end
 
   def update
-    @room = Room.find(params[:room_id])
-    @grouplist = Grouplist.find(params[:id])
     if @grouplist.update(grouplists_params)
       flash[:notice] = '♫予定を更新しました♫'
       redirect_to room_grouplists_path(@room.id)
@@ -45,8 +39,6 @@ class GrouplistsController < ApplicationController
   end
 
   def destroy
-    @room = Room.find(params[:room_id])
-    @grouplist = Grouplist.find(params[:id])
     @grouplist.destroy
     flash[:notice] = '予定を削除しました'
     redirect_to room_grouplists_path(@room.id)
@@ -57,6 +49,14 @@ class GrouplistsController < ApplicationController
   def grouplists_params
     params.require(:grouplist).permit(:title, :start_time, :text, :user, :room, :image).merge(user_id: current_user.id,
                                                                                               room_id: @room.id)
+  end
+
+  def set_room
+    @room = Room.find(params[:room_id])
+  end
+
+  def set_grouplist
+    @grouplist = Grouplist.find(params[:id])
   end
 
   def logged_in_room
