@@ -14,7 +14,7 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 90px 50px 70px 50px;
+  padding: 90px 0 70px ;
   /*←footerの高さ*/
   box-sizing: border-box;
   /*←全て含めてmin-height:100vhに*/

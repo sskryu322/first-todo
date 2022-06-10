@@ -25,15 +25,15 @@
 
 .page-title {
   text-align: center;
-  width: 70%;
+  width: 60%;
   font-size: 2em;
   font-weight: bold;
-  padding: 20px 50px 0 0;
+  padding: 20px 180px 0 0;
 }
 
 .rooms-index {
-  margin: 40px 0 0 30px;
-  width: 30%;
+  padding-top: 40px;
+  width: 40%;
   display: block;
   text-align: center;
   
@@ -51,7 +51,7 @@
 .flex-contents {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  padding: 50px 100px;
 }
 
 .side-var {
