@@ -1,7 +1,7 @@
 class GrouplistsController < ApplicationController
   before_action :logged_in_room
   before_action :authenticate_user!
-  
+
   def index
     @grouplist = Grouplist.new
     @room = Room.find(params[:room_id])
@@ -9,7 +9,6 @@ class GrouplistsController < ApplicationController
   end
 
   def edit
-    
     @room = Room.find(params[:room_id])
     @grouplist = Grouplist.find(params[:id])
   end
@@ -30,6 +29,8 @@ class GrouplistsController < ApplicationController
   def show
     @room = Room.find(params[:room_id])
     @grouplist = Grouplist.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.where(grouplist_id: @grouplist.id, room_id: @grouplist.room_id).order(updated_at: 'desc')
   end
 
   def update
@@ -52,7 +53,7 @@ class GrouplistsController < ApplicationController
   end
 
   private
-  
+
   def grouplists_params
     params.require(:grouplist).permit(:title, :start_time, :text, :user, :room, :image).merge(user_id: current_user.id,
                                                                                               room_id: @room.id)
@@ -60,8 +61,6 @@ class GrouplistsController < ApplicationController
 
   def logged_in_room
     @room = Room.find(params[:room_id])
-    unless logged_in? && current_room.id == @room.id
-      redirect_to login_path
-    end
+    redirect_to login_path unless logged_in? && current_room.id == @room.id
   end
 end

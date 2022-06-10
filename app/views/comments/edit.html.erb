@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <%= render "shared/fifth-header" %>
+  <div class="page-title-show">コメント編集</div>
+
+  <div class="main-contents-show">
+    <div class="article-show" id="article-list">
+      <%= form_with model: [@room, @grouplist, @comment], local: true do |f| %>
+      <%# エラーメッセージ%>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="article-text-edit">
+          <label for="text">コメント内容</label><br>
+          <%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%>
+        </div>
+        <div class="flex-btn">
+          <div class="article-edit-button-show">
+            <%= f.submit class: "register-btn-edit-comment" %>
+          </div>
+          <div class="article-check-button-show">
+          <%= link_to "削除", room_grouplist_comment_path(@room.id, @grouplist.id, @comment.id), method: :delete, data: { confirm: 'コメントを削除しますか？'}%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
+  <% if user_signed_in? %>
+    <div class="btn_registration" id="btn_registration">
+      <%= link_to "ルームページに戻る",  room_grouplists_path(@room.id), class: 'btn_registration' %>
+    </div>
+    <div class="btn_registration" id="btn_registration">
+      <%= link_to "詳細ページに戻る",  room_grouplist_path(@room.id, @grouplist.id), class: 'btn_registration' %>
+    </div>
+  <% end %>
+</div> 
+<%= render "shared/fourth-footer" %>

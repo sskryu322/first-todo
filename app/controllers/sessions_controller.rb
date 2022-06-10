@@ -4,14 +4,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    
     room = Room.find_by(name: params[:session][:name].downcase)
     if room && room.authenticate(params[:session][:password])
       log_in room
       redirect_to room_grouplists_path(room)
     else
       flash.now[:alert] = 'ルーム名orルームキーが間違っています'
-      render 'new' 
+      render 'new'
     end
   end
 
@@ -19,5 +18,4 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to rooms_path
   end
-
 end

@@ -18,7 +18,7 @@
 - has_many :rooms
 - has_many :mylists
 - has_many :grouplists
-- has_many :messages
+- has_many :comments
 
 
 ## mylists テーブル
@@ -62,20 +62,22 @@
 
 ### Association
 
-- has_many :messages
+- has_many :comments
 - belongs_to :user
 - belongs_to :room
 - has_one_attached :image
 
 
-## messages テーブル
+## comments テーブル
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| content  | string     | null: true                     |
-| user_id  | references | null: false, foreign_key: true |
-| room_id  | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| text          | string     | null: false                    |
+| user_id       | references | null: false, foreign_key: true |
+| grouplist_id  | references | null: false, foreign_key: true |
+| room_id       | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 - belongs_to :grouplist
+- belongs_to :room

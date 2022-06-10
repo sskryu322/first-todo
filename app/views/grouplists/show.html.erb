@@ -1,10 +1,10 @@
 <div class="wrapper">
   <%= render "shared/fifth-header" %>
   <div class="page-title-show">ToDo詳細</div>
-  
-  <div class="main-contents-show">
+  <%# メッセージ%>
+  <div class="flash-index"><%= flash[:notice] %></div>
+  <div class="main-contents-comment">
       <div class="article-show" id="article-list">
-        
           <p class="article-post-date-show">
             <span class="show-title">日時</span><br><%= @grouplist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
           </p>
@@ -23,9 +23,6 @@
           <p class="article-text-show">
             <span class="show-title">投稿者</span><br><%= link_to "#{@grouplist.user.nickname}さん",  user_path(@grouplist.user_id)%>
           </p>
-
-
-
            
           <div class="article-information-show">
             <div class="article-check-show">
@@ -48,15 +45,49 @@
               </div>
             </div>
           </div>
-        
       </div>
-    
   </div>
+  <div class="comment-title"><%= "「#{@grouplist.title}」へのコメント"%></div>
+  <div class="comments-field">
+    
+    <div class="room-list-comment">
+      <div class="room-list-supplement">(更新日時順)</div>
+      <% @comments.each do |comment| %>
+        <div class="room-comment">
+          <div class="room-text">
+            <%= comment.text%>
+          </div>
+          <div class="room-nickname-comment">
+            <% if current_user.id == comment.user.id %>
+              <%= link_to "編集(#{current_user.nickname})", edit_room_grouplist_comment_path(@room.id, @grouplist.id, comment.id)%>
+            <% else %>
+              <%= "投稿者：#{comment.user.nickname}さん" %>
+            <% end %>
+          </div>
+          <div class="room-date-comment">
+            <%= l comment.created_at %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
   <% if user_signed_in? %>
       <div class="btn_registration" id="btn_registration">
         <%= link_to "ルームページに戻る",  room_grouplists_path(@room.id), class: 'btn_registration' %>
       </div>
     <% end %>
 </div> 
-
-<%= render "shared/fourth-footer" %>
+<%= form_with model: [@room, @grouplist, @comment], local: true do |f| %>
+    <div class="comment-room-wrapper">
+      <%# エラーメッセージ%>
+      <%#= render 'shared/error_messages', model: f.object %>
+      <div class="article-post-comment">
+        <label for="text">コメント</label><br>
+        <%= f.text_area :text, class:"title-content-comment", placeholder:"（200文字まで)", maxlength:"200"%>
+      </div>
+      <div class="register-field-comment">
+        <%= f.submit class: "register-btn-comment", value: "POST" %>
+      </div>
+    </div> 
+  <% end %>

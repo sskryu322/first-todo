@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :rooms
   has_many :mylists
   has_many :grouplists
-  has_many :messages
+  has_many :comments
 
   validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }, allow_blank: true
   validates :last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }, allow_blank: true
