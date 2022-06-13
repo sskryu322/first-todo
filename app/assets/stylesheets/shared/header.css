@@ -4,9 +4,10 @@
 
 /* ヘッダー全体 */
 .top_page_header {
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
   height: 75px;
-  width: 100%;
   opacity: 0.9;
   position: fixed; 
   top: 0; 
@@ -15,7 +16,6 @@
 
 /* 左のヘッダー */
 .left_menu{
-  float: left;
   margin-top: 5px;
   margin-left: 5px;
 }

@@ -204,6 +204,11 @@ body {
    display: inline;
    text-align: center;
  } 
+
+ .possible_text {
+   font-size: 20px;
+ }
+
  .detail_description{
   width: 100%;
   height: auto;
@@ -215,5 +220,23 @@ body {
 .demo_image{
   width: 100%;
   height: auto;
+  margin-bottom: 30px;
+}
+
+.contents-image{
+  margin: 5px;
+  padding: 10px;
+  background-color: #FFF;
+  border-radius: 10px;
+  
+}
+
+.contents-image {
+  display: none;
+}
+
+.contents-image-smartphone{
+  width: 90%;
+  object-fit: contain;
 }
 }
