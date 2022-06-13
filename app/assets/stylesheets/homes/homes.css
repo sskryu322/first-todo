@@ -165,7 +165,7 @@ body {
 }
 
 /* スマホサイズ以下の場合に表示 */
-@media (max-width: 700px){
+@media (max-width: 600px){
   /* ToDoを共有したいと思ったことはありませんか? */
   .second_title{
     font-size: 1rem;
@@ -207,6 +207,7 @@ body {
  .detail_description{
   width: 100%;
   height: auto;
+  text-align: center;
   padding: 5px;
   font-size: 0.8rem;
 }
