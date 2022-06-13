@@ -165,7 +165,7 @@ body {
 }
 
 /* スマホサイズ以下の場合に表示 */
-@media (max-width: 600px){
+@media (max-width: 500px){
   /* ToDoを共有したいと思ったことはありませんか? */
   .second_title{
     font-size: 1rem;
