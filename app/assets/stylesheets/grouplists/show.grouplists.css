@@ -91,27 +91,32 @@
 .comment-room-wrapper {
   background-color: #CCC;
   width: 100%;
-  display: flex;
+  height: 120px;
   opacity: 0.8;
   position: fixed; 
   bottom: 10px;
   left: 0; 
 }
 
+.comment-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .article-post-comment {
+  display: inline-block;
   color: #555555;
-  width: 50%;
-  margin-left: 350px;
+  width: 80%;
+  text-align: right;
 }
 
 .title-content-comment {
   padding: 5px 10px;
   white-space: nowrap;
-  height: 70px;
-  width: 100%;
+  height: 80px;
+  width: 70%;
   border-radius: 10px;
   border: 1px solid #CCC;
-  display: inline-block;
 }
 
 input[type="text"].title-content-comment {
@@ -121,14 +126,13 @@ input[type="text"].title-content-comment {
 }
 
 .register-field-comment {
-  width: 30%;
+  width: 20%;
 }
 
 .register-btn-comment {
   color: #FFF;
-  display: inline-block;
-  width: 30%;
-  height: 70px;
+  width: 80px;
+  height: 60px;
   padding: 5px;
   margin-top: 30px;
   background: #3ccace;
@@ -165,4 +169,84 @@ input[type="text"].title-content-comment {
   text-align: center;
   color: #555555;
   padding: 0 10px 10px 0;
+}
+
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 500px){
+  .register-btn-comment {
+    color: #FFF;
+    width: 70px;
+    height: 50px;
+    padding: 5px;
+    margin-top: 40px;
+    background: #3ccace;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
+
+  .comments-field {
+    width: 90%;
+    height: auto;
+    background-color: #FFF;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+  }
+
+  .room-list-comment {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #D9E5FF;
+    border-radius: 10px;
+    padding: 10px 5px 5px;
+  }
+  
+  .room-list-supplement {
+    text-align: right;
+    font-size: 15px;
+    margin-bottom: 3px;
+    color: #555555;
+  }
+  
+  .room-comment {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px 5px 0;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    height: auto;
+    width: 100%;
+    background-color: #66FF66;
+  }
+  
+  .room-text{
+    width: 55%;
+    height: 100%;
+    padding-right: 5px;
+    font-size: 14px;
+  }
+  
+  .room-nickname-comment {
+    font-size: 11px;
+    padding-top: 25px;
+    width: 23%;
+    color: #555555;
+    white-space: nowrap;
+    overflow: hidden;
+    
+  }
+  
+  .room-date-comment {
+    width: 11%;
+    padding-top: 12px;
+    font-size: 10px;
+    text-align: right;
+    color: #555555;
+  }
 }

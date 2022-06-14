@@ -128,14 +128,13 @@ input[type="submit"].register-btn-edit {
   
   .article-image-edit {
     font-size: 18px;
-    padding: 0 20px;
     color: #555555;
   }
   
   input[type="file"].image-edit{
     display: inline-block;
     margin: 5px 0;
-    font-size: 15px;
+    font-size: 12px;
     background-color: #fff;
     color: #555555;
     border-radius: 0 10px 10px 0;

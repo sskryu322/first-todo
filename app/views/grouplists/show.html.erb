@@ -48,10 +48,11 @@
       </div>
   </div>
   <div class="comment-title"><%= "「#{@grouplist.title}」へのコメント"%></div>
+  <div class="flash-index"><%= flash.now[:alert] %></div>
   <div class="comments-field">
     <div class="room-list-comment">
       <div class="room-list-supplement">(更新日時順)</div>
-      <% if @comment.present? %>
+      <% if @comments.present? %>
         <% @comments.each do |comment| %>
           <div class="room-comment">
             <div class="room-text">
@@ -78,8 +79,9 @@
     <%= link_to "ルームページに戻る",  room_grouplists_path(@room.id), class: 'btn_registration' %>
   </div>
 </div> 
+<div class="comment-room-wrapper">
 <%= form_with model: [@room, @grouplist, @comment], local: true do |f| %>
-  <div class="comment-room-wrapper">
+  <div class="comment-flex">
     <div class="article-post-comment">
       <label for="text">コメント</label><br>
       <%= f.text_area :text, class:"title-content-comment", placeholder:"（200文字まで)", maxlength:"200"%>
@@ -87,5 +89,6 @@
     <div class="register-field-comment">
       <%= f.submit class: "register-btn-comment", value: "POST" %>
     </div>
-  </div> 
+  </div>  
 <% end %>
+</div> 

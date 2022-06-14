@@ -9,7 +9,7 @@
   </div>
   <%# 新規投稿部分 %>
   <div class="flex-contents">
-    <div class="side-var">
+    <div class="side-var" id="hidden-nav">
       <%= form_with model: @mylist, local: true do |f| %>
       <%# メッセージ%>
       <div class="flash-index"><%= flash[:notice] %></div>
@@ -80,4 +80,7 @@
     </div>
   </div>
 </div> 
+<div class="plus-btn" id="plus-nav">
+<%= link_to image_tag("btn.png", class:"btn-smartphone"), '#' %>
+</div>
 <%= render "shared/second-footer" %> 
