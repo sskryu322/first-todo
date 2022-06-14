@@ -216,3 +216,164 @@ input[type="submit"].search-btn {
   width: 50%;
   margin: 0 auto;
 }
+
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 500px){
+  .page-title-show {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+
+  .article-post-room-index {
+    width: 80%;
+    font-size: 15px;
+    color: #555555;
+    white-space: nowrap;
+    padding: 0 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  .title-content-room-index {
+    font-size: 12px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+  }
+
+  .register-btn-room-index {
+    height: 32px;
+    width: 35%;
+    padding: 5px;
+    margin: 30px 0 20px 20px;
+    background: #3ccace;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
+
+  .room-list-title {
+    width: 100%;
+    font-size: 1.8em;
+    height: 30px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .search-form {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    
+  }
+
+  .search-field {
+    width: 80%;
+    height: 80px;
+    text-align: center;
+  }
+
+  .search-input {
+    width: 55%;
+    height: 30px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 auto;
+  }
+
+  .room-list {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 10px 20px;
+  }
+
+  .room {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    height: auto;
+  }
+
+  .room-name a {
+    padding-top: 5px;
+    font-size: 15px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .room-nickname {
+    font-size: 12px;
+    padding: 5px 5px 0 0;
+    width: 45%;
+    color: #555555;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  
+  .room-date {
+    padding-top: 3px;
+    font-size: 10px;
+    text-align: right;
+    color: #555555;
+  }
+  
+  .room-list-supplement {
+    text-align: right;
+    font-size: 11px;
+    margin-bottom: 3px;
+    color: #555555;
+  }
+
+  .article-post-room-key {
+    font-size: 15px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .room-destroy-button {
+    height: 32px;
+    width: 35%;
+    margin: 20px 10px 0 10px;
+    background: #3ccace;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #CCC;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .room-destroy-button a {
+    width: 30%;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    height: 30px;
+    line-height: 20px;
+    width: 100%;
+    display: block;
+  }
+
+  
+}

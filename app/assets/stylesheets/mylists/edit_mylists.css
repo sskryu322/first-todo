@@ -83,3 +83,98 @@ input[type="submit"].register-btn-edit {
 .register-field-edit {
   margin-top: 20px;
 }
+
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 500px){
+  .article-post-date-edit {
+    width: 80%;
+    font-size: 18px;
+    color: #555555;
+    white-space: nowrap;
+    padding: 0 20px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    white-space: nowrap;
+  }
+  
+  .title-content-edit {
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    padding: 0 15px;
+    font-size: 15px;
+  }
+  
+  .article-title-edit {
+    width: 90%;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #555555;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .article-text-edit {
+    width: 100%;
+    padding: 0 15px;
+    font-size: 18px;
+    color: #555555;
+    font-weight: bold;
+    overflow-wrap: normal;
+    white-space: nowrap;
+    margin-bottom: 10px;
+  }
+  
+  .article-image-edit {
+    font-size: 18px;
+    padding: 0 20px;
+    color: #555555;
+  }
+  
+  input[type="file"].image-edit{
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 15px;
+    background-color: #fff;
+    color: #555555;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #CCC;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } 
+  
+  .register-btn-edit {
+    height: 30px;
+    width: 45%;
+    padding: 5px;
+    margin: 20px 0 20px 20px;
+    background: #3ccace;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid #CCC;
+    cursor: pointer;
+    line-height: 15px;
+  }
+  
+  input[type="submit"].register-btn-edit {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .register-field-edit {
+    margin-top: 20px;
+  }
+
+  .date-content {
+    width: 30%;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    font-size: 15px;
+  }
+}

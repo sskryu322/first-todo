@@ -294,7 +294,200 @@ form input[type="submit"].register-btn {
   text-decoration: underline;
 }
 
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 500px){
+  .side-var {
+    display: none;
+  }
 
+  .rooms-index {
+    padding-top: 30px;
+    width: 40%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .rooms-index a {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #F89174;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #CCC;
+  }
+
+  .page-title {
+    text-align: left;
+    width: 60%;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 30px 0 0 30px;
+  }
+
+  .flex-contents {
+    width: 100%;
+    padding: 30px 10px 10px 10px;
+  }
+
+  .calendar {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 5px;
+  }
+  
+  .calendar-title {
+    font-size: 17px;
+  }
+  
+  .calendar-heading {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .calendar-heading a {
+    padding: 3px 5px;
+    background-color: #3ccace;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 20px;
+    font-size: 11px;
+    text-decoration: none;
+    border: 1px solid #CCC;
+  }
+  
+  .calendar-schedule {
+    background-color: #F89174;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-bottom: 2px;
+    border: 1px solid #CCC;
+  }
+  
+  .calendar-schedule a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+
+  .main-contents{
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .articles{
+    width: 100%;
+    padding: 10px 30px 0 30px;
+  }
+  
+  .article{
+    height: 90px;
+    width: 100%;
+    background: #DDDDDD;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between; 
+    border-radius: 10px;
+    border: 1px solid #CCC;
+  }
+  
+  .article-overview{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+  }
+  
+  .article-overview a{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+  }
+  
+  .article-title{
+    height: 50%;
+    width: 100%;
+    padding: 5px;
+    font-size: 17px;
+    color: #555555;
+    font-weight: bold;
+    border-bottom: solid 2px #555555;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .article-information{
+    height: 15%;
+    width: 100%;
+    display: flex;
+  }
+  
+  .article-post-date{
+    width: 60%;
+    font-size: 12px;
+    color: #555555;
+  }
+  
+  .article-about-time{
+    width: 35%;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .article-information {
+    height: 28px;
+  }
+  
+  .article-check{
+    display: flex;
+    width: 60%;
+    height: 10%;
+    
+  }
+  
+  .article-check-button, .article-edit-button{
+    height: 25px;
+    width: 100%;
+    padding: 5px;
+    margin-right: 20px;
+    background: #3ccace;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 8px;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
+  
+  .article-check-button a, .article-edit-button a  {
+    color: white;
+    text-decoration: none;
+    display: block;
+    line-height: 12px;
+  }
+  
+  .no-image {
+    width: 23%;
+    line-height: 90px;
+    color: white;
+    text-decoration: underline;
+  }
+
+  .article-check-button-contributor {
+    padding-top: 10px;
+    font-size: 10px;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+}
 
 
 

@@ -9,4 +9,14 @@
 .has-events {
   border: 2px solid #CCC;
 }
+} 
+
+
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 500px){
+  .simple-calendar {
+    .day {
+      height: 60px;
+    }
+  }
 }
