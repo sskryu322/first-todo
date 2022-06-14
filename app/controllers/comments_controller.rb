@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
       flash[:notice] = '♫コメントを投稿しました♫'
       redirect_to room_grouplist_path(@room, @grouplist)
     else
-      render 'grouplists/show'
+      flash.now[:alert] = '入力されていませんor200字を超えています'
+      redirect_to room_grouplist_path(@room, @grouplist)
     end
   end
 

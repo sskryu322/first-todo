@@ -90,6 +90,11 @@
  padding-top: 5px;
 }
 
+.link-nav {
+  height: 50px;
+  background-color: #ccc;
+}
+
 .navList li{
   display: inline-block;
   padding-top: 20px;
@@ -176,14 +181,18 @@
   right: -200px;/*右側に隠しておきます*/
   top: 0;
   width: 200px;
-  height: 40vh;
+  height: 35vh;
   padding-top: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   -webkit-transition: all .6s;
-  transition: all .6s;
+  transition: all .5s;
   z-index: 20;
   overflow-y: auto;
   border-radius: 10px;
+  }
+
+  .link-nav {
+    height: 50px;
   }
 
   .navList {
@@ -198,15 +207,6 @@
   padding: 1rem 1rem 0;
   }
 
-  .navItem a {
-  display: block;
-  border-bottom: 1px solid #eee;
-  color: #333333;
-  padding: 3rem 0 1rem;
-  width: 100%;
-  margin: 0 auto;
-  text-decoration: none;
-  }
 /* End ナビゲーション */
 
 /* Start ハンバーガーボタン(三本線の実装) */

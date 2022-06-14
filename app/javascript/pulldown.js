@@ -10,4 +10,4 @@ window.addEventListener('load', function toggleNav() {
     body.classList.remove('nav-open');
   });
 });
-toggleNav();
+
