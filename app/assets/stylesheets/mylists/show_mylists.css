@@ -129,3 +129,119 @@
   width: 100%;
   display: block;
 }
+
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 500px){
+  .main-contents-show {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 0 40px;
+  }
+  
+  .article-show {
+    margin: 30px auto 100px;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+  }
+
+  .show-title {
+    font-size: 18px;
+  }
+
+  .article-post-date-show {
+    width: 100%;
+    font-size: 15px;
+    color: #555555;
+    white-space: nowrap;
+    border-bottom: solid 2px #555555;
+    padding: 0 20px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+  }
+  
+  .article-title-show {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #555555;
+    font-weight: bold;
+    border-bottom: solid 2px #555555;
+    word-wrap:break-all;
+    margin-bottom: 20px;
+  }
+  
+  .article-text-show {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #555555;
+    font-weight: bold;
+    border-bottom: solid 2px #555555;
+    margin-bottom: 20px;
+    word-wrap:break-all;
+  }
+  
+  .article-information-show {
+    height: auto;
+    width: 95%;
+    text-align: center;
+    margin: 0 25%;
+  }
+  
+  .article-check-show {
+    width: 50%;
+    height: 10%;
+  }
+  
+  .article-image-show {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+  }
+  
+  .no-image-show {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    line-height: 100px;
+    color: #6633FF;
+    text-decoration: underline;
+  }
+  
+  .image-title {
+    font-size: 18px;
+    color: #555555;
+    padding-right: 75%;
+  }
+  
+  .article-check-button-show, .article-edit-button-show{
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    margin: 15px 15px 0 0;
+    background: #3ccace;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
+  
+  .article-check-button-show a, .article-edit-button-show a  {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    height: 40px;
+    line-height: 18px;
+    width: 100%;
+    display: block;
+  }
+}

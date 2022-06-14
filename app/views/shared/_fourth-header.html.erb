@@ -1,12 +1,32 @@
-<header class='top_page_header'>
-  <div class='left_menu'>
-  <%= link_to image_tag("logo.png", class:"logo-icon"), rooms_path %>
+<header class='top_page_header_nav'>
+  <div class='left_menu_nav'>
+    <div class="nav-logo">
+      <%= link_to image_tag("logo.png", class:"logo-icon"), rooms_path %>
+    </div>
+   <!-- ナビゲーション -->
+    <div class="right-nav">
+      <nav class="headerNav">
+        <ul class="navList">
+          <li class="navItem">
+            <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class:"link-nav"%>
+          </li>
+          <li class="navItem">
+            <%= link_to 'マイページに戻る', mylists_path, class:"link-nav"%>
+          </li>
+          <li class="navItem">
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"link-nav"%>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <div class='right_menu'>
-    <ul>
-      <li><%= link_to "#{current_user.nickname}さん", user_path(current_user.id) %></li>
-      <li><%= link_to 'マイページに戻る', mylists_path, class: "logout" %> </li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
-    </ul>
+<!-- ハンバーガーボタン -->
+  <div class="hamburger_btn" id="js-hamburger">
+    <span class="hamburger_line hamburger_line_1"></span>
+    <span class="hamburger_line hamburger_line_2"></span>
+    <span class="hamburger_line hamburger_line_3"></span>
   </div>
+<!-- ハンバーガーメニュをクリックした後に現れる半透明の背景-->
+    <div class="black-bg" id="js-black-bg"></div>
+  
 </header>
