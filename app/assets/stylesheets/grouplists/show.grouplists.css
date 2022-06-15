@@ -292,4 +292,16 @@ input[type="text"].title-content-comment {
     justify-content: center;
     margin: 0;
   }
+
+  .register-btn-edit-comment{
+    height: 25px;
+    width: 100%;
+    padding-bottom: 8px;
+    background: #3ccace;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 12px;
+    border: none;
+  }
 }

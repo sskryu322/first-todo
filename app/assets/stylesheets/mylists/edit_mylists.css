@@ -134,7 +134,7 @@ input[type="submit"].register-btn-edit {
   input[type="file"].image-edit{
     display: inline-block;
     margin: 5px 0;
-    font-size: 10.5px;
+    font-size: 10px;
     background-color: #fff;
     color: #555555;
     border-radius: 0 10px 10px 0;

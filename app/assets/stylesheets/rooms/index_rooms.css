@@ -255,12 +255,12 @@ input[type="submit"].search-btn {
 
   .register-btn-room-index {
     height: 32px;
-    width: 36%;
+    width: 40%;
     padding: 5px;
     margin: 30px 0 20px 20px;
     background: #3ccace;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     border-radius: 10px;
     overflow: hidden;
     white-space: nowrap;
