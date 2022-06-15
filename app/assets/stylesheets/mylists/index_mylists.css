@@ -491,16 +491,16 @@ form input[type="submit"].register-btn {
   }
 
   .plus-btn {
-    display: block;
-  }
-
-  .plus-btn {
     display: flex;
     position: fixed; 
     bottom: 20px;
     left: 45%; 
     z-index: 30;
-    
+  }
+
+  .btn-smartphone {
+    width: 40px;
+    height: 40px;
   }
 
   .article-check-button-room, .article-edit-button-room{
