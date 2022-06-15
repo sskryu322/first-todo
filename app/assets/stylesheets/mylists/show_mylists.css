@@ -192,14 +192,13 @@
     padding-right: 78%;
   }
   
-  .article-check-button-show, .article-edit-button-show{
+  .article-check-button-show {
     height: 30px;
     width: 100%;
     padding: 5px;
     margin: 20px 10px 0 0;
     background: #3ccace;
     text-align: center;
-    font-size: 12px;
     border-radius: 10px;
     overflow: hidden;
     white-space: nowrap;
@@ -208,7 +207,7 @@
     cursor: pointer;
   }
   
-  .article-check-button-show a, .article-edit-button-show a  {
+  .article-check-button-show a {
     color: white;
     text-decoration: none;
     font-size: 13px;
@@ -217,11 +216,29 @@
     width: 100%;
     display: block;
   }
+
+  .article-edit-button-show{
+    height: 30px;
+    padding-top: 1px;
+  }
+
+  input[type="submit"].register-btn-edit-comment {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    width: 100%;
+    padding-bottom: 30px;
+  }
   
   .article-information-show {
     height: auto;
-    width: 260px;
+    width: 250px;
     text-align: center;
-   
+  }
+
+  .article-image-show {
+    width: 90%;
+    height: 100%;
+    margin: 0 10px;
   }
 }
