@@ -226,7 +226,7 @@ form input[type="submit"].register-btn {
 
 
 .article-information{
-  height: 15%;
+  height: 30px;
   width: 100%;
   display: flex;
 }
@@ -247,10 +247,6 @@ form input[type="submit"].register-btn {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.article-information {
-  height: 30px;
 }
 
 .article-check{
@@ -366,7 +362,6 @@ form input[type="submit"].register-btn {
     background-color: #F89174;
     text-align: center;
     border-radius: 5px;
-    
     margin-bottom: 2px;
     border: 1px solid #CCC;
   }
@@ -444,7 +439,7 @@ form input[type="submit"].register-btn {
   }
   
   .article-information {
-    height: 28px;
+    height: 100%;
     width: 100%;
     
   }
@@ -484,7 +479,7 @@ form input[type="submit"].register-btn {
   }
 
   .article-check-button-contributor {
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 10px;
     text-decoration: underline;
     margin-left: 5px;
@@ -505,7 +500,7 @@ form input[type="submit"].register-btn {
 
   .article-check-button-room, .article-edit-button-room{
     height: 25px;
-    width: 22%;
+    width: 27%;
     padding: 5px;
     margin-right: 5px;
     background: #3ccace;
