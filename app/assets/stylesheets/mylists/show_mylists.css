@@ -237,8 +237,8 @@
   }
 
   .article-image-show {
-    width: 80%;
+    width: 100px;
     height: 100%;
-    margin-left: 30px;
+    margin: 0;
   }
 }

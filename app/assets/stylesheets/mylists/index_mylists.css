@@ -483,6 +483,8 @@ form input[type="submit"].register-btn {
     font-size: 10px;
     text-decoration: underline;
     margin-left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .plus-btn {
