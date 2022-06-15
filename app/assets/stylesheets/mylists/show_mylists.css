@@ -136,15 +136,14 @@
     height: 100%;
     width: 100%;
     margin-bottom: 50px;
-    padding: 0 40px;
+    padding: 0 10px;
   }
   
   .article-show {
-    margin: 30px auto 100px;
     height: 100%;
     width: 80%;
     background: #FFF;
-    padding: 30px;
+    padding: 5px;
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid #CCC;
@@ -193,8 +192,36 @@
     padding-right: 78%;
   }
   
+  .article-check-button-show, .article-edit-button-show{
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    margin: 20px 10px 0 0;
+    background: #3ccace;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
   
+  .article-check-button-show a, .article-edit-button-show a  {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    height: 40px;
+    line-height: 18px;
+    width: 100%;
+    display: block;
+  }
   
-  
-  
+  .article-information-show {
+    height: auto;
+    width: 260px;
+    text-align: center;
+   
+  }
 }

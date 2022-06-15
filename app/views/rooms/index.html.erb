@@ -45,7 +45,7 @@
             <% if current_user.id == room.user.id %>
               <%= link_to "編集(#{current_user.nickname})", edit_room_path(room.id)%>
             <% else %>
-              <%= "作成者：#{room.user.nickname}さん" %>
+              <%= "作成：#{room.user.nickname}" %>
             <% end %>
           </div>
           <div class="room-date">

@@ -62,7 +62,7 @@
               <% if current_user.id == comment.user.id %>
                 <%= link_to "編集(#{current_user.nickname})", edit_room_grouplist_comment_path(@room.id, @grouplist.id, comment.id)%>
               <% else %>
-                <%= "投稿者：#{comment.user.nickname}さん" %>
+                <%= "投：#{comment.user.nickname}" %>
               <% end %>
             </div>
             <div class="room-date-comment">

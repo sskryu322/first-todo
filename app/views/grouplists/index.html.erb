@@ -71,7 +71,7 @@
                     <%= link_to "完了", room_grouplist_path(grouplist.room_id, grouplist.id), method: :delete, data: { confirm: 'タスク完了(削除)しますか？'}%>
                   </div>
                   <div class="article-check-button-contributor" id="hidden-btn" data=<%= grouplist.id %>>
-                    <%= link_to "投稿:#{grouplist.user.nickname}さん",  user_path(grouplist.user_id)%>
+                    <%= link_to "#{grouplist.user.nickname}さん",  user_path(grouplist.user_id)%>
                   </div>
               </div>
             </div>

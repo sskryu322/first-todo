@@ -219,10 +219,14 @@ input[type="submit"].search-btn {
 
 /* スマホサイズ以下の場合に表示 */
 @media (max-width: 500px){
+  .new-room-wrapper {
+    padding: 10px 35px;
+  }
+  
   .page-title-show {
     width: 100%;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
     padding-top: 30px;
   }
@@ -241,7 +245,7 @@ input[type="submit"].search-btn {
 
   .title-content-room-index {
     font-size: 12px;
-    padding: 5px 20px;
+    padding: 5px 5px;
     margin-bottom: 20px;
     height: 30px;
     width: 100%;
@@ -251,12 +255,12 @@ input[type="submit"].search-btn {
 
   .register-btn-room-index {
     height: 32px;
-    width: 35%;
+    width: 36%;
     padding: 5px;
     margin: 30px 0 20px 20px;
     background: #3ccace;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 10px;
     overflow: hidden;
     white-space: nowrap;
@@ -267,7 +271,7 @@ input[type="submit"].search-btn {
 
   .room-list-title {
     width: 100%;
-    font-size: 1.8em;
+    font-size: 1.5em;
     height: 30px;
     text-align: center;
     margin: 20px 0;
@@ -292,7 +296,7 @@ input[type="submit"].search-btn {
     border: 1px solid #CCC;
     border-radius: 10px;
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     margin: 0 auto;
   }
 
@@ -316,19 +320,20 @@ input[type="submit"].search-btn {
 
   .room-name a {
     padding-top: 5px;
-    font-size: 15px;
+    font-size: 13px;
     display: block;
     white-space: nowrap;
     overflow: hidden;
   }
   
   .room-nickname {
-    font-size: 12px;
-    padding: 5px 5px 0 0;
+    font-size: 10px;
+    padding: 10px 3px 0 0;
     width: 45%;
     color: #555555;
     white-space: nowrap;
     overflow: hidden;
+    text-align: center;
   }
   
   
@@ -374,6 +379,15 @@ input[type="submit"].search-btn {
     width: 100%;
     display: block;
   }
-
   
+  .search-btn {
+    width: 18%;
+    padding: 5px;
+    background: #3ccace;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
 }
