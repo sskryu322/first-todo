@@ -11,8 +11,8 @@
 ## 概要
 毎日忙しくてスケジュール管理が疎かになっている。<br>
 業務に追われて仲間と密にコミュニケーションが取れていない。<br>
-そんな頑張っているあなたの一歩を後押しすることを目的としたToDoアプリケーションです。<br>
-個人のToDoはもちろん、担当部門やスポーツチームなど、用途に合わせて様々なグループ単位でのToDoも画像付きで管理できます。<br>
+そんな頑張っているあなたの一歩を後押しすることを目的としたToDoアプリケーション。<br>
+個人のToDoはもちろん、担当部門やスポーツチームなど、用途に合わせて様々なグループ単位でのToDoも画像付きで管理できる。<br>
 
 ## URL（Herokuによるデプロイ）
 https://first-todo322.herokuapp.com/
@@ -20,7 +20,6 @@ https://first-todo322.herokuapp.com/
 ### Basic認証
 - ID: ryosasaki
 - Pass: 0322
-
 <br>
 
 ### テスト用アカウント①
@@ -36,13 +35,11 @@ https://first-todo322.herokuapp.com/
 <br>
 
 ### 利用方法
-1. ログイン後、ユーザー別の個人ToDoページに遷移し、個人別のToDo管理ができます。<br>
-2. ページ内「ルームに移動する」をクリックすると、共有ToDoの作成ページに遷移し、新規ToDoルーム作成、ルーム検索などができます。<br>
-ルーム毎に任意のパスワードを設定することで、参加メンバーの制限が可能です。
-3. ルーム内では、投稿されたタスク毎にコメントの投稿ができ、タスクについてコミュニケーションを図れます。<br>
+1. ログイン後、ユーザー別の個人ToDoページに遷移し、個人別のToDo管理ができる。<br>
+2. ページ内「ルームに移動する」をクリックすると、共有ToDoの作成ページに遷移し、新規ToDoルーム作成、ルーム検索ができる。<br>
+ルーム毎に任意のパスワードを設定することで、参加メンバーの制限が可能。
+3. ルーム内では、投稿されたタスク毎にコメントの投稿ができ、各タスクについてコミュニケーションが取れる。<br>
 
-是非、利用してみてください！
-<br>
 <br>
 <br>
 
@@ -66,9 +63,9 @@ https://first-todo322.herokuapp.com/
 | 2  | ユーザー管理       | ユーザー別の機能とするため  | <img src="https://i.gyazo.com/de1d12ee2e0bd59f421ab0544d50e0fa.gif" width="240" height="170"> |
 | 3  | My ToDo          | ユーザー個別のToDo管理機能 | <img src="https://i.gyazo.com/e459ace3ae225ea8946b5a194dd0cd9a.gif" width="240" height="170"> |
 | 4  | 画像投稿          | ToDoには画像が投稿できる   | <img src="https://i.gyazo.com/354396a4a63b82db39b235f942713fd8.gif" width="240" height="170"> |
-| 5  | ルーム作成        | 各ユーザーはToDoルームを<br>パスワード付きで作成することができる | <img src="https://i.gyazo.com/aaaddfa7a36aa91d4b0b169aeaa15a47.gif" width="240" height="170"> |
-| 6  | ルーム検索        | ToDoルーム一覧から参加するルームを<br>検索することができる | <img src="https://i.gyazo.com/6f81370eccfa4e9d09d83aa95a52c0c8.gif" width="240" height="170"> | |
-| 7  | コメント投稿      | 各ルームではタスク毎にコメントが<br>投稿できる          | <img src="https://i.gyazo.com/16e057e3f07cd27e1dea29a5704a5de8.gif" width="240" height="170"> |
+| 5  | ルーム作成        | 各ユーザーはToDoルームをパスワード付きで作成することができる | <img src="https://i.gyazo.com/aaaddfa7a36aa91d4b0b169aeaa15a47.gif" width="240" height="170"> |
+| 6  | ルーム検索        | ToDoルーム一覧から参加するルームを検索することができる | <img src="https://i.gyazo.com/6f81370eccfa4e9d09d83aa95a52c0c8.gif" width="240" height="170"> | |
+| 7  | コメント投稿      | 各ルームではタスク毎にコメントが投稿できる          | <img src="https://i.gyazo.com/16e057e3f07cd27e1dea29a5704a5de8.gif" width="240" height="170"> |
 | 8  | スマートフォン対応 | スマートフォンでも快適な操作が可能 | <img src="https://i.gyazo.com/7ede03046b264e18d9cc3dc2b818aefc.gif" width="110" height="170"> |
 
 <br>
