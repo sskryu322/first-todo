@@ -80,7 +80,7 @@ https://first-todo322.herokuapp.com/
 <br>
 
 # 6.データベース設計
-<img src="https://i.gyazo.com/f29e397c606516d187efc4a62753dfce.png" width="600" height="500">
+<img src="https://i.gyazo.com/099e5bba7822987911c53494deb27c62.png" width="600" height="500">
 
 <br>
 
@@ -171,7 +171,7 @@ https://first-todo322.herokuapp.com/
 <br>
 
 ## 画面遷移図
-<img src="https://i.gyazo.com/099e5bba7822987911c53494deb27c62.png" width="600" height="300">
+<img src="https://i.gyazo.com/6ec1a91088f01b053a80e3bfb2c8d5a5.png" width="600" height="300">
 
 <br>
 <br>
