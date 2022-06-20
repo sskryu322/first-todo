@@ -55,7 +55,7 @@ class MylistsController < ApplicationController
   end
 
   def mylists_params
-    params.require(:mylist).permit(:title, :start_time, :text, :user, :image).merge(user_id: current_user.id)
+    params.require(:mylist).permit(:title, :start_time, :text, :user, main_images: []).merge(user_id: current_user.id)
   end
 
   def move_to_index

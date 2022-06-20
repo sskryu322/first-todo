@@ -48,7 +48,7 @@ class GrouplistsController < ApplicationController
   
 
   def grouplists_params
-    params.require(:grouplist).permit(:title, :start_time, :text, :user, :room, :image).merge(user_id: current_user.id,
+    params.require(:grouplist).permit(:title, :start_time, :text, :user, :room, main_images: []).merge(user_id: current_user.id,
                                                                                               room_id: @room.id)
   end
 
