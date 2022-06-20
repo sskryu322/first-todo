@@ -26,8 +26,8 @@
         <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%></p>
         <label for="text">詳細</label>
         <p><%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%></p>
-        <label for="image">画像</label>
-        <p class="file-field"><%= f.file_field :image, class: "image"%></p>
+        <label for="image">画像(複数枚可)</label>
+        <p class="file-field"><%= f.file_field :main_images, class: "image", multiple: true%></p>
       </div>
       <div class="register-field">
        <%= f.submit class: "register-btn" %>
@@ -76,10 +76,12 @@
               </div>
             </div>
           </div>
-          <% if grouplist.image.present? %>
-          <%= link_to grouplist.image, "data-lightbox" => grouplist.image do %>
-            <%= image_tag grouplist.image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
-          <% end %>
+          <% if grouplist.main_images.present? %>
+            <% grouplist.main_images.each do |image| %>
+              <%= link_to image, "data-lightbox" => image do %>
+                <%= image_tag image.variant(resize_to_fill: [600, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+              <% end %>
+            <% end %>  
           <% else %>
           <div class="no-image">noimege</div>
           <% end %>

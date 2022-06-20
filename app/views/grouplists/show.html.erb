@@ -26,11 +26,13 @@
            
           <div class="article-information-show">
             <div class="article-check-show">
-              <% if @grouplist.image.present? %>
+              <% if @grouplist.main_images.present? %>
               <div class="image-title">画像</div>
-                <%= link_to @grouplist.image, "data-lightbox" => @grouplist.image do %>
-                  <%= image_tag @grouplist.image.variant(resize_to_fill: [800, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+              <% @grouplist.main_images.each do |image| %>
+                <%= link_to image, "data-lightbox" => image do %>
+                  <%= image_tag image.variant(resize_to_fill: [800, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
                 <% end %>
+              <% end %>  
               <% else %>
               <div class="image-title">画像</div>
               <div class="no-image-show">noimege</div>
