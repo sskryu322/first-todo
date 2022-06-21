@@ -175,33 +175,34 @@ form input[type="submit"].register-btn {
 .main-contents{
   height: auto;
   width: 100%;
-  padding: 0 50px 10px 300px;
 }
 
 .articles{
-  margin: 0 0 0 auto;
-  width: 80%;
-  padding: 0 70px 0 10px;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .article{
-  height: 150px;
-  width: 100%;
+  height: auto;
+  width: auto;
   background: #DDDDDD;
   padding: 20px 20px 10px 20px;
   margin-bottom: 10px;
   display: flex;
-  justify-content:space-between; 
   border-radius: 10px;
   border: 1px solid #CCC;
 }
 
 .article-overview{
-  width: 60%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column;
   justify-content:space-between;
+}
+
+.many-images {
+  margin-left: 40px;
 }
 
 .article-overview a{
@@ -214,6 +215,7 @@ form input[type="submit"].register-btn {
   height: 50%;
   width: 100%;
   padding: 10px 10px 0 10px;
+  margin-bottom: 10px;
   font-size: 23px;
   color: #555555;
   font-weight: bold;
@@ -257,13 +259,13 @@ form input[type="submit"].register-btn {
 }
 
 .article-check-button, .article-edit-button{
-  height: 30px;
+  height: 35px;
   width: 100%;
   padding: 5px;
   margin-right: 20px;
   background: #3ccace;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   border-radius: 10px;
   overflow: hidden;
   white-space: nowrap;
@@ -285,7 +287,7 @@ form input[type="submit"].register-btn {
 }
 
 .no-image {
-  width: 20%;
+  width: 100%;
   line-height: 100px;
   color: white;
   text-decoration: underline;
@@ -381,24 +383,22 @@ form input[type="submit"].register-btn {
   
   .articles{
     width: 100%;
-    padding: 10px 10px 0 10px;
-    
   }
   
   .article{
-    height: 90px;
-    width: 100%;
+    height: auto;
+    width: 90%;
     background: #DDDDDD;
     padding: 5px 10px 5px 10px;
-    margin-bottom: 10px;
+    margin: 0 auto;
     display: flex;
-    justify-content:space-between; 
+    flex-wrap: wrap;
     border-radius: 10px;
     border: 1px solid #CCC;
   }
   
   .article-overview{
-    width: 60%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -409,6 +409,10 @@ form input[type="submit"].register-btn {
     display: block;
     height: 100%;
     text-decoration: none;
+  }
+
+  .many-images {
+    margin-left: 20px;
   }
   
   .article-title{
@@ -424,10 +428,8 @@ form input[type="submit"].register-btn {
     text-overflow: ellipsis;
   }
   
-  
-  
   .article-post-date{
-    width: 60%;
+    width: 100%;
     font-size: 12px;
     color: #555555;
   }
@@ -468,14 +470,11 @@ form input[type="submit"].register-btn {
     color: white;
     text-decoration: none;
     display: block;
-    line-height: 12px;
+    line-height: 15px;
   }
   
   .no-image {
-    width: 23%;
-    line-height: 90px;
-    color: white;
-    text-decoration: underline;
+   display: none;
   }
 
   .article-check-button-contributor {
@@ -500,7 +499,7 @@ form input[type="submit"].register-btn {
     height: 40px;
   }
 
-  .article-check-button-room, .article-edit-button-room{
+   .article-edit-button-room{
     height: 25px;
     width: 27%;
     padding: 5px;
@@ -605,6 +604,36 @@ form input[type="submit"].register-btn {
     background-color: #FFFFC0;
     border-radius: 20px;
   }
+
+  .article-check-room-index{
+    display: flex;
+    width: 90%;
+    height: 30px;
+  }
+
+  .article-check-button-room, .article-edit-button-room{
+    height: 25px;
+    width: 20%;
+    padding: 5px;
+    margin-right: 10px;
+    background: #3ccace;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 2px solid #CCC;
+    cursor: pointer;
+  }
+  
+  .article-check-button-room a, .article-edit-button-room a  {
+    color: white;
+    text-decoration: none;
+    display: block;
+    line-height: 10px;
+  }
+  
 }
 
 

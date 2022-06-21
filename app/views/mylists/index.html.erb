@@ -23,7 +23,7 @@
         <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%></p>
         <label for="text">詳細</label>
         <p><%= f.text_area :text, class:"text-content-todo", placeholder:"（200文字まで)", maxlength:"200"%></p>
-        <label for="image">画像(複数枚可)</label>
+        <label for="image">画像(6枚まで)</label>
         <p class="file-field"><%= f.file_field :main_images, class: "image", multiple: true%></p>
       </div>
       <div class="register-field">
@@ -68,6 +68,7 @@
               </div>
             </div>
           </div>
+          <div class="many-images">
           <% if mylist.main_images.present? %>
             <% mylist.main_images.each do |image| %>
               <%= link_to image, "data-lightbox" => image do %>
@@ -77,6 +78,7 @@
           <% else %>
             <div class="no-image">noimege</div>
           <% end %>
+          </div>
         </div>
       <% end %>
     </div>
