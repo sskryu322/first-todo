@@ -21,7 +21,7 @@
         </div>
         <div class="article-image-edit">
           <label for="image">画像</label>
-          <p class="file-field"><%= f.file_field :image, class: "image-edit"%></p>
+          <p class="file-field"><%= f.file_field :main_images, class: "image-edit", multiple: true%></p>
         </div>
         <div class="register-field-edit">
           <%= f.submit class: "register-btn-edit" %>
