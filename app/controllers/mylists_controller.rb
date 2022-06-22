@@ -21,7 +21,7 @@ class MylistsController < ApplicationController
       flash[:notice] = '♫予定を登録しました♫'
       redirect_to mylists_path
     else
-      flash.now[:alert] = 'タイトルを正しく入力してください'
+      flash.now[:alert] = 'タイトルor画像枚数に不備があります'
       render :index
     end
   end
