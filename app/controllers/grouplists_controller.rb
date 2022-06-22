@@ -19,7 +19,7 @@ class GrouplistsController < ApplicationController
       flash[:notice] = '♫予定を登録しました♫'
       redirect_to room_grouplists_path(@room.id)
     else
-      flash.now[:alert] = 'タイトルを正しく入力してください'
+      flash.now[:alert] = "タイトルor画像枚数に不備があります"
       render :index
     end
   end

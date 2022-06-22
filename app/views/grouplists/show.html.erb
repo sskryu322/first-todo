@@ -30,7 +30,7 @@
               <div class="image-title">画像</div>
               <% @grouplist.main_images.each do |image| %>
                 <%= link_to image, "data-lightbox" => image do %>
-                  <%= image_tag image.variant(resize_to_fill: [800, 500]), class: "article-image-show", height: '250', :style=>"width:300;"%>
+                  <%= image_tag image, class: "article-image-show", height: '250', :style=>"width:300;"%>
                 <% end %>
               <% end %>  
               <% else %>
