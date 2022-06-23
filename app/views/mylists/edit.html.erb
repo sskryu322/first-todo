@@ -1,6 +1,6 @@
 <div class="wrapper">
   <%= render "shared/third-header" %>
-  <div class="page-title-show">ToDo編集</div>
+  <div class="page-title-show"><i class="fa-solid fa-paw"></i>ToDo編集<i class="fa-solid fa-paw"></i></div>
 
   <div class="main-contents-show">
     <div class="article-show" id="article-list">
@@ -8,19 +8,19 @@
       <%# エラーメッセージ%>
       <%= render 'shared/error_messages', model: f.object %>
         <div class="article-post-date-edit">
-          <label for="title">タイトル(必須)</label><br>
+          <label for="title"><i class="fa-solid fa-pen-to-square"></i>タイトル(必須)</label><br>
           <%= f.text_field :title, class:"title-content-edit", placeholder:"（40文字まで)", maxlength:"40"%>
         </div>
         <div class="article-title-edit">
-          <label for="start_time">日付(必須)</label><br>
-          <%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%>
+          <label for="start_time"><i class="fa-solid fa-calendar-days"></i>日付(必須)</label><br>
+          <%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2"><i class="fa-solid fa-clock-rotate-left"></i>時間</h4>'},{class: "date-content", id: 'ymd-date'}%>
         </div>
         <div class="article-text-edit">
-          <label for="text">詳細</label><br>
+          <label for="text"><i class="fa-solid fa-feather-pointed"></i>詳細</label><br>
           <%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%>
         </div>
         <div class="article-image-edit">
-          <label for="image">画像</label>
+          <label for="image"><i class="fa-solid fa-camera-retro"></i>画像</label>
           <p class="file-field"><%= f.file_field :main_images, class: "image-edit", multiple: true%></p>
         </div>
         <div class="register-field-edit">

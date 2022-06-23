@@ -1,36 +1,36 @@
 <div class="wrapper">
   <%= render "shared/third-header" %>
-  <div class="page-title-show">ToDo詳細</div>
+  <div class="page-title-show"><i class="fa-solid fa-paw"></i>ToDo詳細<i class="fa-solid fa-paw"></i></div>
   
   <div class="main-contents-show">
     <div class="article-show" id="article-list">
       <p class="article-post-date-show">
-        <span class="show-title">日時</span><br><%= @mylist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
+        <span class="show-title"><i class="fa-solid fa-clock-rotate-left"></i>日時</span><br><%= @mylist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
       </p>
       <p class="article-title-show">
-        <span class="show-title">タイトル</span><br><%= @mylist.title%>
+        <span class="show-title"><i class="fa-solid fa-pen-to-square"></i>タイトル</span><br><%= @mylist.title%>
       </p>
       <% if @mylist.text.present? %>
         <p class="article-text-show">
-          <span class="show-title">内容</span><br><%= @mylist.text%>
+         <span class="show-title"><i class="fa-solid fa-feather-pointed"></i>内容</span><br><%= @mylist.text%>
         </p>
       <% else %>
         <p class="article-text-show">
-          <span class="show-title">内容</span><br><%= "(投稿なし)"%>
+          <span class="show-title"><i class="fa-solid fa-feather-pointed"></i>内容</span><br><%= "(投稿なし)"%>
         </p>
       <% end %>
            
       <div class="article-information-show">
         <div class="article-check-show">
           <% if @mylist.main_images.present? %>
-            <div class="image-title">画像</div>
+            <div class="image-title"><i class="fa-solid fa-camera-retro"></i></div>
             <% @mylist.main_images.each do |image| %>
               <%= link_to image, "data-lightbox" => image do %>
                 <%= image_tag image, class: "article-image-show", height: '250', :style=>"width:300;"%>
               <% end %>
             <% end %>  
           <% else %>
-            <div class="image-title">画像</div>
+            <div class="image-title"><i class="fa-solid fa-camera-retro"></i></div>
             <div class="no-image-show">noimege</div>
           <% end %>
             <div class="flex-btn">

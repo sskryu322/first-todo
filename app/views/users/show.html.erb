@@ -4,19 +4,19 @@
     <div class='form-wrap-edit'>
       <div class='form-header'>
         <h1 class='form-header-text-edit'>
-        <%= "#{@user.nickname}のプロフィール" %>
+          <i class="fa-solid fa-paw"></i><%= "#{@user.nickname}のプロフィール" %> <i class="fa-solid fa-paw"></i>
         </h1>
       </div>
   
       <div class="form-group-edit">
         <div class='form-text-wrap-edit'>
-          <label class="form-text-edit">ニックネーム</label>
+          <label class="form-text-edit"><i class="fa-solid fa-person"></i>ニックネーム</label>
         </div>
         <span class="text-content"><%= @user.nickname %></span>
       </div>
       <div class="form-group-edit">
         <div class='form-text-wrap-edit'>
-          <label class="form-text-edit">お名前</label>
+          <label class="form-text-edit"><i class="fa-solid fa-person"></i>お名前</label>
         </div>
         <% if @user.first_name.blank? && @user.last_name.blank? %>
           <span class="text-content"><%= '-未登録-' %></span>
@@ -27,7 +27,7 @@
       </div>
       <div class="form-group-edit">
         <div class='form-text-wrap-edit'>
-          <label class="form-text-edit">部署/店舗/チームなど</label>
+          <label class="form-text-edit"><i class="fa-solid fa-building-circle-arrow-right"></i>部署/店舗/チームなど</label>
         </div>
         <% if @user.first_name.blank? && @user.last_name.blank? %>
           <span class="text-content"><%= '-未登録-' %></span>
@@ -37,7 +37,7 @@
       </div>
       <div class="form-group-edit">
         <div class='form-text-wrap-edit'>
-          <label class="form-text-edit">役職/担当/資格など</label>
+          <label class="form-text-edit"><i class="fa-solid fa-building-user"></i>役職/担当/資格など</label>
         </div>
         <% if @user.first_name.blank? && @user.last_name.blank? %>
           <span class="text-content"><%= '-未登録-' %></span>
