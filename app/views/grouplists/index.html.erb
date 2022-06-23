@@ -7,7 +7,7 @@
     <div class="rooms-index">
       <%= link_to 'ルームを退室する', rooms_path, {class: "btn-shadow"}%>
     </div>
-    <div class="page-title"><%= "#{@room.name}" %></div>
+    <div class="page-title"><i class="fa-solid fa-paw"></i><%= "#{@room.name}" %><i class="fa-solid fa-paw"></i></div>
   </div>
 
   <%# 新規投稿部分 %>
@@ -19,14 +19,14 @@
       <%# エラーメッセージ%>
       <div class="flash-index-error"><%= flash.now[:alert] %></div>
       <div class="field row">
-        <P class="schedule-input-title">予定を登録する</P>
-        <label for="title">タイトル(必須)</label>
+        <P class="schedule-input-title"><i class="fa-solid fa-paw"></i>予定を登録する<i class="fa-solid fa-paw"></i></P>
+        <label for="title"><i class="fa-solid fa-pen-to-square"></i>タイトル(必須)</label>
         <p><%= f.text_field :title, class:"title-content", placeholder:"（40文字まで)", maxlength:"40"%></p>
-        <label for="start_time">日付(必須)</label>
-        <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'},{class: "date-content", id: 'ymd-date'}%></p>
-        <label for="text">詳細</label>
+        <label for="start_time"><i class="fa-solid fa-calendar-days"></i>日付(必須)</label>
+        <p><%= f.datetime_select :start_time, {use_month_numbers: true, start_year: Date.today.year, datetime_separator: '<h4 class="fb-txt font-weight-bold my-2"><i class="fa-solid fa-clock-rotate-left"></i>時間</h4>'},{class: "date-content", id: 'ymd-date'}%></p>
+        <label for="text"><i class="fa-solid fa-feather-pointed"></i>詳細</label>
         <p><%= f.text_area :text, class:"text-content", placeholder:"（200文字まで)", maxlength:"200"%></p>
-        <label for="image">画像(6枚まで)</label>
+        <label for="image"><i class="fa-solid fa-camera-retro"></i>画像(6枚まで)</label>
         <p class="file-field"><%= f.file_field :main_images, class: "image", multiple: true%></p>
       </div>
       <div class="register-field">
@@ -55,7 +55,7 @@
         <div class="article" id="article-list">
           <div class="article-overview">
             <%= link_to room_grouplist_path(grouplist.room_id, grouplist.id) do %>
-              <p class="article-post-date">
+              <p class="article-post-date"><i class="fa-solid fa-paw"></i>
                 <%= grouplist.start_time.strftime("%Y年%m月%d日 %H:%M")%>
               </p>
               <p class="article-title">

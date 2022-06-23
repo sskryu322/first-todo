@@ -4,7 +4,7 @@
   <div class='form-wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>
-        ユーザー編集
+        <i class="fa-solid fa-paw"></i>ユーザー編集 <i class="fa-solid fa-paw"></i>
       </h1>
     </div>
   
@@ -13,13 +13,13 @@
   
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">ニックネーム</label>
+        <label class="form-text"><i class="fa-solid fa-person"></i>ニックネーム</label>
       </div>
       <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) ToDo政宗", maxlength:"40" , autofocus: true %>
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">メールアドレス</label>
+        <label class="form-text"><i class="fa-regular fa-envelope"></i>メールアドレス</label>
       </div>
       <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autocomplete: 'off' %>
       <br><p class='info-text'>以下の項目からは任意となります。<br>登録内容はプロフィールページに表示されます。</p>
@@ -31,7 +31,7 @@
     
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">お名前(全角)</label>
+        <label class="form-text"><i class="fa-solid fa-person"></i>お名前(全角)</label>
         <span class="indispensable">(任意)</span>
       </div>
       <div class='input-name-wrap'>
@@ -41,14 +41,14 @@
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">部署/店舗/チームなど</label>
+        <label class="form-text"><i class="fa-solid fa-building-circle-arrow-right"></i>部署/店舗/チームなど</label>
         <span class="indispensable">(任意)</span>
       </div>
       <%= f.text_area :department, class:"input-default", id:"department", placeholder:"例) 人事グループ/宮城店", maxlength:"40" , autofocus: true %>
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">役職/担当/資格など</label>
+        <label class="form-text"><i class="fa-solid fa-building-user"></i>役職/担当/資格など</label>
         <span class="indispensable">(任意)</span>
       </div>
       <%= f.text_area :position, class:"input-default", id:"position", placeholder:"例) 店長/生鮮担当/薬剤師", maxlength:"40" , autofocus: true %>

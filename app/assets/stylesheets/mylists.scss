@@ -9,6 +9,11 @@
 .has-events {
   border: 2px solid #CCC;
 }
+.has-events::before {
+ content: '\f1b0';
+ font-weight: 600;
+ font-family: 'Font Awesome 5 Free';
+}
 } 
 
 
