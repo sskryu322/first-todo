@@ -1,17 +1,17 @@
 <div class="wrapper">
   <%= render "shared/fourth-header" %>
-  <div class="page-title-show">Roomページ</div>
+  <div class="page-title-show"><i class="fa-solid fa-paw"></i>Roomページ<i class="fa-solid fa-paw"></i></div>
 
   <%= form_with model: @room, local: true do |f| %>
     <div class="new-room-wrapper">
       <%# エラーメッセージ%>
       <%= render 'shared/error_messages', model: f.object %>
       <div class="article-post-room-index">
-        <label for="name">ルーム名(必須)</label><br>
+        <label for="name"><i class="fa-solid fa-house-circle-exclamation"></i>ルーム名(必須)</label><br>
         <%= f.text_field :name, class:"title-content-room-index", placeholder:"（40文字まで)", maxlength:"40"%>
       </div>
       <div class="article-post-room-index">
-        <label for="password">ルームキー(必須)</label><br>
+        <label for="password"><i class="fa-solid fa-key"></i>ルームキー(必須)</label><br>
         <%= f.password_field :password, class:"title-content-room-index", placeholder:"（ルームキーを設定してください)"%>
       </div>
       <div class="article-post-room-index">
@@ -25,7 +25,7 @@
   <% end %>
 
   <div class="border"></div>
-  <div class="room-list-title">Roomリスト</div>
+  <div class="room-list-title"><i class="fa-solid fa-paw"></i>Roomリスト<i class="fa-solid fa-paw"></i></div>
   <%# 検索欄 %>
   <div class="search-field">
     <%= form_with(url: search_rooms_path, local: true, method: :get, class: "search-form") do |form| %>

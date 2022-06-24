@@ -1,6 +1,6 @@
 <div class="wrapper">
   <%= render "shared/fourth-header" %>
-  <div class="page-title-show">Room認証</div>
+  <div class="page-title-show"><i class="fa-solid fa-paw"></i>Room認証<i class="fa-solid fa-paw"></i></div>
 
   <%= form_for(:session, url: login_path) do |f| %>
     <div class="new-room-wrapper">
@@ -10,11 +10,11 @@
         <div class="room-key-title"><%= %></div>
       </div>
       <div class="article-post-room-key">
-        <label for="name">ルーム名(必須)</label><br>
+        <label for="name"><i class="fa-solid fa-house-circle-exclamation"></i>ルーム名(必須)</label><br>
         <%= f.text_field :name, class:"title-content-room-index", placeholder:"（ルーム名を入力してください)"%>
       </div>
       <div class="article-post-room-key">
-        <label for="password">ルームキー(必須)</label><br>
+        <label for="password"><i class="fa-solid fa-key"></i>ルームキー(必須)</label><br>
         <%= f.password_field :password, class:"title-content-room-index", placeholder:"（キーを入力してください)"%>
       </div>
       <div class="register-field-room-index">
